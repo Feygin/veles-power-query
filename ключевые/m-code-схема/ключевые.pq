@@ -1,4 +1,4 @@
 let
-    source = fnGetTableFromFile(schema_path, [kind = "Table", name = "ключевые"])
+    source = fnGetTableFromFile(схема_путь, [kind = "Table", name = "ключевые"])
 in
     source

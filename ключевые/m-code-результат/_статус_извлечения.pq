@@ -1,5 +1,5 @@
 let
-    source = _expected_all_files,
+    source = _все_файлы_папки,
     join_error_results = Table.NestedJoin(source, {"имя файла", "лист"}, #"_errors", {"имя файла", "лист"}, "_pipeline_errors", JoinKind.LeftOuter),
     expand_error_results = Table.ExpandTableColumn(join_error_results, "_pipeline_errors", {"статус"}, {"статус_err"}),
     join_successful_results = Table.NestedJoin(expand_error_results, {"имя файла", "лист"}, #"_successful", {"имя файла", "лист"}, "_pipeline_successful", JoinKind.LeftOuter),
