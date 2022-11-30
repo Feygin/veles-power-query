@@ -1,6 +1,9 @@
+/* 
+
+ */
 let
-    source = #"_join_schema",
-    filter_1k1n = Table.SelectRows(source, 
+    source = #"_присоединяем_схему", //ссылка на предыдущий шаг
+    filter_1k1n = Table.SelectRows(source, //оставляем строки с 1к, 1н
         each ([классификатор_key] = "1к") or ([классификатор_key] = "1н")
     ),
     group_data = Table.Group(

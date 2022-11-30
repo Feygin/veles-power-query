@@ -1,4 +1,17 @@
+/* 
+    из файла схема загружаем таблицу "классификатор"
+ */
 let
-    source = fnGetTableFromFile(schema_path, [kind = "Table", name = "классификатор"])
+    source = fnGetTableFromFile(схема_путь, [kind = "Table", name = "классификатор"]), //загружаем таблицу классификатор
+    select_cols = Table.SelectColumns( //выбираем нужные поля
+        source, 
+        {
+            "классификатор_key",
+            "классификатор",
+            "классификатор описание",
+            "классификатор с описанием",
+            "классификатор_sort"
+        }
+    ) 
 in
-    source
+    select_cols

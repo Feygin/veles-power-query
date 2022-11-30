@@ -1,6 +1,9 @@
+/* 
+    отфильтровываем классификаторы 1к и 1н и получаем таблицу дополнительные часы
+ */
 let
-    source = #"_join_schema",
-    filter_out_1k1n = Table.SelectRows(source, 
+    source = #"_присоединяем_схему", //ссылка на предыдущий шаг
+    filter_out_1k1n = Table.SelectRows(source, //исключаем классификаторы 1к, 1н
         each ([классификатор_key] <> "1к") and ([классификатор_key] <> "1н")
     )
 in

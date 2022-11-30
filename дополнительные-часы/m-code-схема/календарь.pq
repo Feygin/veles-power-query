@@ -1,5 +1,9 @@
+/* 
+    из файла схема загружаем таблицу "календарь"
+ */
 let
-    source = fnGetTableFromFile(schema_path, [kind = "Table", name = "календарь"]),
-    #"Changed Type" = Table.TransformColumnTypes(source,{{"дата", type date}})
+    source = fnGetTableFromFile(#"схема_путь", [kind = "Table", name = "календарь"]), //загружаем таблицу календарь
+    select_cols = Table.SelectColumns(source, {"дата", "месяц год"}), //выюираем нужные поля
+    change_dtype = Table.TransformColumnTypes(select_cols,{{"дата", type date}}) //изменяем тип данных в поле [дата] на date
 in
-    #"Changed Type"
+    change_dtype

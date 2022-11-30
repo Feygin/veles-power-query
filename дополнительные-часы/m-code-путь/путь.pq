@@ -1,5 +1,9 @@
+/* 
+    загружаем таблицу с путями к источникам
+    таблица хранится на одном из листов книги
+ */
 let
-    Source = Excel.CurrentWorkbook(){[Name="путь"]}[Content],
-    #"Changed Type" = Table.TransformColumnTypes(Source,{{"файл", type text}, {"путь", type text}})
+    source = Excel.CurrentWorkbook(){[Name="путь"]}[Content], //получаем данные таблицы
+    change_dtype = Table.TransformColumnTypes(source,{{"файл", type text}, {"путь", type text}}) //изменяем тип данных
 in
-    #"Changed Type"
+    change_dtype
