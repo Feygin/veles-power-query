@@ -1,14 +1,14 @@
 /* 
-
+    получаем таблицу 1к1н
  */
 let
     source = #"_присоединяем_схему", //ссылка на предыдущий шаг
     filter_1k1n = Table.SelectRows(source, //оставляем строки с 1к, 1н
         each ([классификатор_key] = "1к") or ([классификатор_key] = "1н")
     ),
-    group_data = Table.Group(
-        filter_1k1n, 
-        {
+    group_data = Table.Group( //перед выполнением pivot агрегируем часы и стоимость для показателей 1к / 1н 
+        filter_1k1n, //так как из-за разделения расчетов для субподрядных организация 
+        { //для одного месяца может быть несколько строк с расчетом показателей 1к / 1н
             "дата", 
             "схема.год",
             "схема.месяц год",
@@ -27,10 +27,14 @@ let
             {"часы", each List.Sum([часы]), type nullable number}, 
             {"стоимость руб", each List.Sum([стоимость руб]), type nullable number}}
     ),
-    values_to_rec = Table.AddColumn(group_data, "Value", each [часы = [часы], #"стоимость руб" = [стоимость руб]]),
-    remove_values = Table.RemoveColumns(values_to_rec,{"часы", "стоимость руб"}),
-    pivot = Table.Pivot(remove_values, List.Distinct(remove_values[классификатор_key]), "классификатор_key", "Value"),
-    expand_1k = Table.ExpandRecordColumn(pivot, "1к", {"часы", "стоимость руб"}, {"1к.часы", "1к.стоимость руб"}),
-    expand_1n = Table.ExpandRecordColumn(expand_1k, "1н", {"часы", "стоимость руб"}, {"1н.часы", "1н.стоимость руб"})
+    values_to_rec = Table.AddColumn( //добавляем часы и стоимость в запись, чтобы провести pivot для нескольких столбцов с значениями
+        group_data, 
+        "Value", 
+        each [часы = [часы], #"стоимость руб" = [стоимость руб]]
+    ), 
+    remove_values = Table.RemoveColumns(values_to_rec,{"часы", "стоимость руб"}), //удаляем столбцы, которые добавили в запись
+    pivot = Table.Pivot(remove_values, List.Distinct(remove_values[классификатор_key]), "классификатор_key", "Value"), //выполняем pivot
+    expand_1k = Table.ExpandRecordColumn(pivot, "1к", {"часы", "стоимость руб"}, {"1к.часы", "1к.стоимость руб"}), //раскрываем запись для 1к
+    expand_1n = Table.ExpandRecordColumn(expand_1k, "1н", {"часы", "стоимость руб"}, {"1н.часы", "1н.стоимость руб"}) //раскрываем запись для 1н
 in
     expand_1n

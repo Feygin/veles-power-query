@@ -1,7 +1,7 @@
 /* 
     выводим статус излечения файлов
-    так мы проверяем, что из всех файлов были извлечены таблицы
-    таблица будет отсутствовать в списке если ее имя отличается от допустимого
+    в нем мы проверяем, что из всех файлов были извлечены таблицы
+    если таблица не была извлечана 
  */
 let
     //таблица со всеми файлоами в папке
@@ -18,6 +18,6 @@ let
     //объединяем результат
     join = Table.NestedJoin(rename_folder_files, {"имя файла"}, add_status, {"имя файла"}, "_extracted", JoinKind.LeftOuter),
     expand = Table.ExpandTableColumn(join, "_extracted", {"таблица", "статус"}, {"таблица", "статус"}),
-    replace_null_status = Table.ReplaceValueexpand,null,"не найдено",Replacer.ReplaceValue,{"статус"})
+    replace_null_status = Table.ReplaceValue(expand, null,"не найдено",Replacer.ReplaceValue,{"статус"})
 in
     replace_null_status
