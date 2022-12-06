@@ -1,5 +1,5 @@
 let
-    source = #"_transformation",
+    source = #"_трансформируем_данные",
     select_cols = Table.SelectColumns(source, {"имя файла", "лист", "Unpivot"}),
     remove_rows_with_err = Table.RemoveRowsWithErrors(select_cols),
     add_status = Table.AddColumn(remove_rows_with_err, "статус", each "извлечено"),

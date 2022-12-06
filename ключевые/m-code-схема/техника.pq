@@ -1,4 +1,18 @@
+/*
+    из файла схема загружаем таблицу "техника"
+ */
 let
-    source = fnGetTableFromFile(схема_путь, [kind = "Table", name = "техника"])
+    source = fnGetTableFromFile(#"схема_путь", [kind = "Table", name = "техника"]), //загружаем таблицу техника
+    select_cols = Table.SelectColumns( //выбираем нужные поля
+        source, 
+        {
+            "наименование техники_key",
+            "наименование техники",
+            "группа техники",
+            "подгруппа техники",
+            "наименование техники_sort",
+            "группа техники_sort"
+        }
+    )
 in
-    source
+    select_cols

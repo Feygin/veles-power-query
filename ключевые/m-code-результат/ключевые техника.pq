@@ -1,5 +1,5 @@
 let
-    source = #"_transformation",
+    source = #"_трансформируем_данные",
     select_cols = Table.SelectColumns(source, {"имя файла", "лист", "Unpivot"}),
     filter = Table.SelectRows(select_cols, each [лист] = "тех.ресурсы"),
     remove_sheet = Table.RemoveColumns(filter, {"лист"}),

@@ -1,6 +1,6 @@
 let
-    source = Folder.Files(#"ключевые_path"),
-    filter_subfolders = Table.SelectRows(source, each ([Folder Path] = #"ключевые_path" & "\")),
+    source = Folder.Files(#"ключевые_путь"),
+    filter_subfolders = Table.SelectRows(source, each ([Folder Path] = #"ключевые_путь" & "\")),
     filter_hidden = Table.SelectRows(filter_subfolders, each [Attributes]?[Hidden]? = false),
     select_cols = Table.SelectColumns(filter_hidden,{"Name"}),
     rename_col = Table.RenameColumns(select_cols,{{"Name", "имя файла"}}),
