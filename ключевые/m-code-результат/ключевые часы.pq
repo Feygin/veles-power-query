@@ -7,8 +7,8 @@ let
     source = #"_трансформируем_данные", //ссылка на предыдущий шаг
     select_cols = Table.SelectColumns(source, {"имя файла", "лист", "Unpivot"}), //оставляем поля с данными и их метаданными
     filter = Table.SelectRows(select_cols, each [лист] = "лр по видам работ"), //оставляем строки с ключевыми часами
-    remove_sheet = Table.RemoveColumns(filter, {"лист"}), //удаляем поле с именем листа
-    remove_rows_with_err = Table.RemoveRowsWithErrors(remove_sheet), //удаляем строки с ошибками
+    rename_sheet_attr = Table.RenameColumns(filter, {{"лист", "имя листа"}}), //переименовываем поле с именем листа
+    remove_rows_with_err = Table.RemoveRowsWithErrors(rename_sheet_attr), //удаляем строки с ошибками
     expand_cols = Table.ExpandTableColumn( //объединяем содержимое
         remove_rows_with_err, 
         "Unpivot", 
@@ -16,7 +16,18 @@ let
     ),
 
     //pivot
-    pivot = Table.Pivot(expand_cols, List.Distinct(expand_cols[#"ед изм"]), "ед изм", "Value", List.Sum), //пивот по столбцу единица измерения
+    replace_dots_in_nums = fnReplaceSymbols( //заменяем "." на "," в числовых столбцах, чтобы при преобразовании
+        expand_cols, //типа данных не появились ошибки
+        [columns = {"Value"}, replacement = {{".", ","}}] 
+    ),
+    change_dtypes = Table.TransformColumnTypes( //изменяем типы данных
+        replace_dots_in_nums, 
+        {
+            {"дата", type date},
+            {"Value", type number}
+        }
+    ),
+    pivot = Table.Pivot(change_dtypes, List.Distinct(expand_cols[#"ед изм"]), "ед изм", "Value", List.Sum), //пивот по столбцу единица измерения
     rename_cols = Table.RenameColumns(pivot,{{"ч.ч.", "часы"}, {"чел.", "люди"}, {"ключевые ед изм", "ед изм"}}), //переименовываем столбцы со значением часов
 
     //формируем ключи
@@ -37,17 +48,11 @@ let
     create_project_key = Table.CombineColumns(clean_dups,{"проект_dup", "подпроект_dup"},Combiner.CombineTextByDelimiter("_", QuoteStyle.None),"проект_key"), //создаем композитный ключ для проекта
     create_kluchevie_key = Table.CombineColumns(create_project_key,{"ключевые_dup", "ед изм_dup"},Combiner.CombineTextByDelimiter("_", QuoteStyle.None),"ключевые_key"), //создаем композитный ключ для ключевых
     normalize_subproject_key = fnReplaceMultipleValues(create_kluchevie_key, [columns = {"организация_key"}, replacement = #"нормализация"]), //заменям значения в столбце организация согласно таблице переименований
-    change_dtypes = Table.TransformColumnTypes( //изменяем типы данных
-        normalize_subproject_key, 
-        {
-            {"дата", type date},
-            {"люди", type number},
-            {"часы", type number}
-        }
-    ),
+
+    //заменяем . на , в числовых полях и изменяем тип данных
     //обогащаем данные значениями из схемы
-    join_calendar = Table.NestedJoin(change_dtypes, {"дата"}, #"календарь", {"дата"}, "дата_joined", JoinKind.LeftOuter), //присоединяем календарь
-    expand_calendar = Table.ExpandTableColumn(join_calendar, "дата_joined", {"месяц год"}, {"схема.месяц год"}),
+    join_calendar = Table.NestedJoin(normalize_subproject_key, {"дата"}, #"календарь", {"дата"}, "дата_joined", JoinKind.LeftOuter), //присоединяем календарь
+    expand_calendar = Table.ExpandTableColumn(join_calendar, "дата_joined", {"год", "месяц год"}, {"схема.год", "схема.месяц год"}),
     join_project = Table.NestedJoin(expand_calendar, {"проект_key"}, проект, {"проект_key"}, "проект_joined", JoinKind.LeftOuter), //присоединяем проект
     expand_project = Table.ExpandTableColumn(join_project, "проект_joined", {"проект", "подпроект"}, {"схема.проект", "схема.подпроект"}),
     join_subcontractor = Table.NestedJoin(expand_project, {"организация_key"}, организация, {"организация_key"}, "организация_joined", JoinKind.LeftOuter), //присоединяем организацию
@@ -112,6 +117,7 @@ let
             "люди",
             "часы",
             "имя файла",
+            "имя листа",
             "время обновления база"
         }
     )
