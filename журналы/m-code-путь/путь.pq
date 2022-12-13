@@ -1,4 +1,8 @@
+/* 
+    загружаем таблицу с путями к источникам
+    таблица хранится на одном из листов книги
+ */
 let
-    Source = Excel.CurrentWorkbook(){[Name="путь"]}[Content]
+    source = Excel.CurrentWorkbook(){[Name="путь"]}[Content] //получаем данные таблицы
 in
-    Source
+    source

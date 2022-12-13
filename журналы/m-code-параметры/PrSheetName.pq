@@ -1,5 +1,9 @@
+/*     
+    из таблицы параметр получаем значение параметра, в котором хранится
+    имя листа журнала из которого извлекаем данные
+*/
 let
-    source = #"параметр"{[параметр_key = "PrSheetName"]}[значение],
-    normalize = Text.Trim(Text.Clean(Text.Lower(source)))
+    source = #"параметр"{[параметр_key = "PrSheetName"]}[значение], //значение параметра
+    normalize = Text.Trim(Text.Clean(Text.Lower(source))) //нормализуем значение
 in
     normalize

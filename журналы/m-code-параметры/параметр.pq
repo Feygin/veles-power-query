@@ -1,4 +1,8 @@
+/* 
+    загружаем таблицу с параметрами
+    таблица хранится на листе параметры
+ */
 let
-    Source = Excel.CurrentWorkbook(){[Name="параметр"]}[Content]
+    source = Excel.CurrentWorkbook(){[Name="параметр"]}[Content]
 in
-    Source
+    source
