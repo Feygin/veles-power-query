@@ -1,32 +1,106 @@
 /* 
-    Цель: 
+    цель:
+        Добавляет к таблице столбцы, с помощью которых пользователь может группировать строки журнала.
+        В исходном журнале таких столбцов нет. Вместо этого вся иерархия хранится в одном столбце.
+        Иерархию можно представить в виде уровней, где 0 - самый крупный уровень. 
+        На примере географического местоположения: 0 - страна -> 1 - округ -> 2 - город и тд. 
+        Чтобы преобразовать иерархию в столбцы для группировки нужен вспомогательный столбец. 
+        В нем пользователь присваивает иерархии номер уровня. На основании номера уровня функция создает столбцы для группировки. 
+        Важно, чтобы иерархия располагалась последовательно друг под другом: 0 - Россия -> 1 - Центральный округ -> 2 - Москва.
+        Непоследовательное расположение уровней приведет к неверному результату: 0 - Россия -> 2 - Москва -> 1 - Центральный округ.
+        Пример раскрытия иерархии:
+        уровень     ур0    ур1                   ур2          ур3         
+        0           Россия    
+        1           Россия Центральный округ    
+        2           Россия Центральный округ     Москва
+        1           Россия Дальневосточный округ
+        2           Россия Дальневосточный округ Благовещенск
+        3           Россия Дальневосточный округ Благовещенск Благовещенская улица
+        0           Казахстан
+
+    аргументы:
+        max_level - максимальный уровень иерархии
+        hierarchy_col - имя столбца в котором задан уровень иерархии
+        descr_col - имя столбца в котором содержится значение иерархии
  */
-(source, max_level, hierarchy_col, descr_col)=>
+(source, max_level, hierarchy_col, descr_col) =>
     let
         // [
-        NEW_HIERARCHY_NAMES = 
+        NEW_HIERARCHY_NAMES = //список новых столбцов, в которые раскрываем иерархию
             List.Buffer(
-                List.Transform({1..max_level}, each "ркц ур" & Text.From(_))
+                List.Transform(
+                    {1..max_level},
+                    each "ркц ур" & Text.From(_)
+                )
             ),
-        
-        hierarchy_to_num = Table.TransformColumnTypes(source, {hierarchy_col, Int64.Type}),
-
-        fnGetHierarchy = (row)=>
-            let
-                hierarchy_level = Record.Field(row, hierarchy_col),
-                hierarchy_header = Record.Field(row, descr_col),
-                hierarchy_level_abs = Number.Abs(hierarchy_level),
-                nulls = List.Repeat({null}, hierarchy_level_abs - 1),
-                stoppers = List.Repeat({""}, max_level - hierarchy_level_abs),
-                combine = nulls & {hierarchy_header} & stoppers,
-                hierarchy_record = Record.FromList(combine, NEW_HIERARCHY_NAMES)
-            in
-                hierarchy_record,
-
-        add_hierarchy = Table.AddColumn(hierarchy_to_num, "_hierarchy", fnGetHierarchy ),
-        replace_errors = Table.ReplaceErrorValues(add_hierarchy, {{"_hierarchy", null}}),
-        expand_hierarchy = Table.ExpandRecordColumn(replace_errors, "_hierarchy", NEW_HIERARCHY_NAMES),
-        fill_down = Table.FillDown(expand_hierarchy, NEW_HIERARCHY_NAMES)
-        // ]
+        hierarchy_to_num = //преобразовываем тип данных столбца, который содержит номера уровеней
+            Table.TransformColumnTypes( //в число
+                source,
+                {
+                    hierarchy_col,
+                    Int64.Type
+                }
+            ),
+        //функция для извлечения иерархии
+        //принцип следующий:
+        //номер столбца в который записывается значение иерархии определяется по номеру уровня
+        //в столбцы у которых уровень выше записываем null, чтобы иерархия протянулась с более высоких уровней 
+        //в столбцы у которых уровень ниже записываем пустую строку, чтобы иерархия не протянулась с более низких уровней 
+        fnGetHierarchy =
+            (row) =>
+                let
+                    hierarchy_level = Record.Field(row, hierarchy_col), //значение уровня иерархии
+                    hierarchy_header = Record.Field(row, descr_col), //значение иерархи
+                    //модуль уровня иерархии, необходим для совместимостью со старой кодировкой журналов
+                    hierarchy_level_abs = Number.Abs(hierarchy_level),
+                    nulls = //для уровней выше генерируем null
+                        List.Repeat(
+                            {null},
+                            hierarchy_level_abs - 1
+                        ),
+                    stoppers = //для уровней выше генерируем пустые строки
+                        List.Repeat(
+                            {""},
+                            max_level - hierarchy_level_abs
+                        ),
+                    combine = nulls //объединяем иерархию и сгенерированные списки
+                        & {
+                            hierarchy_header
+                        } & stoppers,
+                    hierarchy_record = //создаем запись у которой в полях имена новых столбцов
+                        Record.FromList( //а в значениях объединенный список с иерархией, null и пустыми строками
+                            combine,
+                            NEW_HIERARCHY_NAMES
+                        )
+                in
+                    hierarchy_record,
+        add_hierarchy = //добавлем столбец с записью
+            Table.AddColumn(
+                hierarchy_to_num,
+                "_hierarchy",
+                fnGetHierarchy
+            ),
+        replace_errors = //заменяем ошибки при извлечении иерархии на null
+            Table.ReplaceErrorValues(
+                add_hierarchy,
+                {
+                    {
+                        "_hierarchy",
+                        null
+                    }
+                }
+            ),
+        expand_hierarchy = //раскрываем иерархию в столбцы
+            Table.ExpandRecordColumn(
+                replace_errors,
+                "_hierarchy",
+                NEW_HIERARCHY_NAMES
+            ),
+        fill_down = //протягиваем иерархию
+            Table.FillDown(
+                expand_hierarchy,
+                NEW_HIERARCHY_NAMES
+            )
+    // ]
     in
         fill_down

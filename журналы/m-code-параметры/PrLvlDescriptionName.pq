@@ -1,5 +1,9 @@
+/*     
+    из таблицы параметр получаем значение параметра, в котором хранится имя столбца
+    с наименованием уровней иерархии 
+*/
 let
-    source = #"параметр"{[параметр_key = "PrLvlDescriptionName"]}[значение],
-    normalize = Text.Trim(Text.Clean(Text.Lower(source)))
+    source = #"параметр"{[параметр_key = "PrLvlDescriptionName"]}[значение], //значение параметра
+    normalize = Text.Trim(Text.Clean(Text.Lower(source))) //нормализуем значение параметра
 in
     normalize
