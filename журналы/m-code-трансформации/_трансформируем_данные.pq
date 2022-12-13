@@ -49,17 +49,18 @@ let
                 filter,
     filter_index = Table.AddColumn(unfold_hierarchy, "FilterIndex",  each fnFilterIndex([UnfoldHierarchy], "контракт^индекс^^")), //исключаем непроиндексированные строки
 
-    normalize_header = Table.AddColumn(unfold_hierarchy, "NormalizedColumns",  each fnNormalizeHeader([UnfoldHierarchy])),
-    select_contract_part = Table.AddColumn(normalize_header, "SelectContract",  each fnSelectContractColumns([UnfoldHierarchy], [NormalizedColumns])),
-    select_fact_part = Table.AddColumn(select_contract_part, "SelectFact",  each fnSelectFactColumns([UnfoldHierarchy], [NormalizedColumns])),
-    unpivot_fact = Table.AddColumn(select_fact_part, "FactUnpivot",  each fnUnpivot([SelectFact])),
-    check_errors = Table.AddColumn(
-        unpivot_fact, 
+    check_errors = Table.AddColumn( //проверяем наличие ошибок при трансформации файлов
+        filter_index, 
         "статус извлечения", 
         each if (try [ExtractHeader])[HasError] then "Ошибка при извлечении заголовка: "  & fnExtractErrDescription((try [ExtractHeader])[Error])
              else if (try [UnfoldHierarchy])[HasError] then "Ошибка при извлечении уровней иерархии: "  & fnExtractErrDescription((try [UnfoldHierarchy])[Error])
-             else if (try [FactUnpivot])[HasError] then "Ошибка при трансформации блока с периодами: "  & fnExtractErrDescription((try [FactUnpivot])[Error])
+             else if (try [FilterIndex])[HasError] then "Ошибка при определении индексов: "  & fnExtractErrDescription((try [FilterIndex])[Error])
              else "Извлечено"
     )
+
+    // normalize_header = Table.AddColumn(unfold_hierarchy, "NormalizedColumns",  each fnNormalizeHeader([UnfoldHierarchy])),
+    // select_contract_part = Table.AddColumn(normalize_header, "SelectContract",  each fnSelectContractColumns([UnfoldHierarchy], [NormalizedColumns])),
+    // select_fact_part = Table.AddColumn(select_contract_part, "SelectFact",  each fnSelectFactColumns([UnfoldHierarchy], [NormalizedColumns])),
+    // unpivot_fact = Table.AddColumn(select_fact_part, "FactUnpivot",  each fnUnpivot([SelectFact])),
 in
     check_errors
