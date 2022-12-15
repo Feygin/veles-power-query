@@ -14,6 +14,7 @@ let
     fnSelectContractColumns =
         (source)=>
             let
+            // [ //для debug
                 CONTRACT_KEYWORD = "контракт^",
                 FACT_KEYWORD = "факт^",
                 FACT_EXCLUDE_KEYWORD = "^^факт исключить",
@@ -36,10 +37,10 @@ let
                             null
                 ),
                 //убираем лишнее
-                filter_contract_cols = Table.SelectRows(add_contract_marker, each ([фильтр] = "v")),
+                filter_cols = Table.SelectRows(add_contract_marker, each ([фильтр] = "v")),
         
                 extract_header_name = Table.AddColumn( //извлекаем название столбцов из объединенной шапки
-                    filter_contract_cols,
+                    filter_cols,
                     "столбцы нормализованные",
                     each
                         if Text.StartsWith([извлеченные столбцы], "контракт^") then
@@ -52,12 +53,12 @@ let
                 cols_to_select = extract_header_name[извлеченные столбцы], 
                 //список из списков для переименования столбцов
                 list_with_renames = Table.ToRows(
-                    filter_contract_cols[[извлеченные столбцы], [столбцы нормализованные]]
+                    extract_header_name[[извлеченные столбцы], [столбцы нормализованные]]
                 ),
                 
                 select_cols = Table.SelectColumns(source, cols_to_select), //выбираем контрактные столбцы
                 rename_cols = Table.RenameColumns(select_cols, list_with_renames) //переименовываем 
-
+            // ],
             in
                 rename_cols,
     apply_column_slection = fnSelectContractColumns(combine), //применяем функцию 
