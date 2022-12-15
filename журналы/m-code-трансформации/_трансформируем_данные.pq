@@ -58,9 +58,5 @@ let
              else "Извлечено"
     )
 
-    // normalize_header = Table.AddColumn(unfold_hierarchy, "NormalizedColumns",  each fnNormalizeHeader([UnfoldHierarchy])),
-    // select_contract_part = Table.AddColumn(normalize_header, "SelectContract",  each fnSelectContractColumns([UnfoldHierarchy], [NormalizedColumns])),
-    // select_fact_part = Table.AddColumn(select_contract_part, "SelectFact",  each fnSelectFactColumns([UnfoldHierarchy], [NormalizedColumns])),
-    // unpivot_fact = Table.AddColumn(select_fact_part, "FactUnpivot",  each fnUnpivot([SelectFact])),
 in
     check_errors

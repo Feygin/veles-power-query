@@ -1,6 +1,9 @@
+/* 
+    проверяем работу функции fnUnpivot
+ */
 let
-    source = Excel.CurrentWorkbook(){[Name="unpivot"]}[Content],
+    source = Excel.CurrentWorkbook(){[Name="unpivot"]}[Content], //загружаем таблицу для теста, см скрытый лист
 
-    unpivot = fnUnpivot(source)
+    unpivot = fnUnpivot(source) //проверяем работу функции
 in
     unpivot
