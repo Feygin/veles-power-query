@@ -1,0 +1,4556 @@
+{
+  "name": "Показатели проекта — Power BI Desktop _Сентябрь 2021_",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "ru-RU",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "discourageImplicitMeasures": true,
+    "sourceQueryCulture": "ru-RU",
+    "tables": [
+      {
+        "name": "факт",
+        "lineageTag": "73a1bb95-5f26-4ff1-887a-344936231854",
+        "columns": [
+          {
+            "name": "дата",
+            "dataType": "dateTime",
+            "sourceColumn": "дата",
+            "formatString": "Long Date",
+            "lineageTag": "05a41a1a-b21a-4f28-ad96-4264b15b8084",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"D\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект_key",
+            "dataType": "string",
+            "sourceColumn": "проект_key",
+            "lineageTag": "0b418098-77de-4816-aaaf-ea7749927ee1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые вед поз",
+            "dataType": "string",
+            "sourceColumn": "типовые вед поз",
+            "lineageTag": "0e943bf1-e103-448c-ae41-e1288f0a1c98",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые вед поз"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация_key",
+            "dataType": "string",
+            "sourceColumn": "организация_key",
+            "lineageTag": "54eebc6d-47c6-4cdc-ab3d-8b5147186ba8",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые_key",
+            "dataType": "string",
+            "sourceColumn": "типовые_key",
+            "lineageTag": "0bea6099-d858-46c4-80ad-77d6586eff45",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "объем",
+            "dataType": "double",
+            "sourceColumn": "объем",
+            "lineageTag": "1298b764-5ad2-4926-b579-2797407c1575",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "объем"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "нормочасы зимний",
+            "dataType": "double",
+            "sourceColumn": "нормочасы зимний",
+            "lineageTag": "8c096c6d-b089-4821-b9e5-1b31f81bc37e",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "нормочасы зимний"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "часы",
+            "dataType": "double",
+            "sourceColumn": "часы",
+            "lineageTag": "f692577d-a850-498e-8c63-2c41d54baf25",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "часы"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "нормочасы",
+            "dataType": "double",
+            "sourceColumn": "нормочасы",
+            "lineageTag": "27bc2f10-9589-4470-bc06-529a0bcbbaac",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "нормочасы"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "факт-b8ddf7bd-43fa-4407-a7bd-3f5008ff761c",
+            "mode": "import",
+            "queryGroup": "fact",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    объединяем таблицы факт из баз вм",
+                " */",
+                "let",
+                "    source = #\"_содержимое_факт\", //ссылка шаг в котором извлечено содержимое баз факта",
+                "    filter_data = Table.SelectRows(source,  each [Item] = \"факт\"), //оставляем таблицы c фактом",
+                "    combine_tables = Table.Combine(filter_data[Data]), //объединяем таблицы",
+                "    select_columns = Table.SelectColumns( //выбираем требуемые поля",
+                "        combine_tables,",
+                "       {",
+                "            \"дата\",",
+                "            \"проект_key\",",
+                "            \"организация_key\",",
+                "            \"типовые_key\",",
+                "            \"типовые вед поз\",",
+                "            \"объем факт\",",
+                "            \"нормочасы факт\",",
+                "            \"нормочасы зимний факт\",",
+                "            \"часы факт\"",
+                "        }",
+                "    ),",
+                "    rename_columns = Table.RenameColumns( //переименовываем часть столбцов, чтобы они соответствовали единому наименованию",
+                "        select_columns,",
+                "        {",
+                "            {\"объем факт\", \"объем\"},",
+                "            {\"нормочасы факт\", \"нормочасы\"},",
+                "            {\"нормочасы зимний факт\", \"нормочасы зимний\"},",
+                "            {\"часы факт\", \"часы\"}",
+                "        }",
+                "    ),",
+                "    change_dtype = Table.TransformColumnTypes( //изменяем тип данных",
+                "        rename_columns,",
+                "        {",
+                "            {\"дата\", type date},",
+                "            {\"проект_key\", type text},",
+                "            {\"организация_key\", type text},",
+                "            {\"типовые_key\", type text},",
+                "            {\"типовые вед поз\", type text},",
+                "            {\"объем\", type number},",
+                "            {\"нормочасы\", type number},",
+                "            {\"нормочасы зимний\", type number},",
+                "            {\"часы\", type number}",
+                "        }",
+                "    )",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ]
+      },
+      {
+        "name": "дополнительные часы",
+        "lineageTag": "77c4dc4a-4104-4c7f-a354-58e6f9c043e0",
+        "columns": [
+          {
+            "name": "дата",
+            "dataType": "dateTime",
+            "sourceColumn": "дата",
+            "formatString": "Long Date",
+            "lineageTag": "6acd746c-c1a0-4127-8fd7-ef45854c11fe",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"D\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект_key",
+            "dataType": "string",
+            "sourceColumn": "проект_key",
+            "lineageTag": "f6d2dc23-fe89-4893-aaae-b013b3988020",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "часы",
+            "dataType": "double",
+            "sourceColumn": "часы",
+            "lineageTag": "08af0f45-9218-4fc9-adff-ec15ab61397a",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "часы"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация_key",
+            "dataType": "string",
+            "sourceColumn": "организация_key",
+            "lineageTag": "070f8c4e-a7e0-44f8-b69b-37f58aadbc37",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "классификатор_key",
+            "dataType": "string",
+            "sourceColumn": "классификатор_key",
+            "lineageTag": "d8c84d8e-f566-4af2-8a1a-be4fe910ae08",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "классификатор_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые_key",
+            "dataType": "string",
+            "sourceColumn": "типовые_key",
+            "lineageTag": "ba286ec0-528e-4407-bbea-8a23abdd8d97",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "дополнительные часы-71ec9609-ad82-44e4-a529-83c64bc08959",
+            "mode": "import",
+            "queryGroup": "fact",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    объединяем таблицы дополнительных часов из баз доп часов",
+                " */",
+                "let",
+                "    source = #\"_содержимое_дополнительные_часы\", //ссылка шаг в котором извлечено содержимое баз дополнительных часов",
+                "    filter_data = Table.SelectRows(source,  each [Item] = \"дополнительные_часы\"), //оставляем таблицы c дополнительными часами",
+                "    combine_tables = Table.Combine(filter_data[Data]), //объединяем таблицы",
+                "    select_columns = Table.SelectColumns( //выбираем требуемые поля",
+                "        combine_tables,",
+                "       {",
+                "            \"дата\",",
+                "            \"проект_key\",",
+                "            \"организация_key\",",
+                "            \"классификатор_key\",",
+                "            \"типовые_key\",",
+                "            \"часы\"",
+                "        }",
+                "    ),",
+                "    change_dtype = Table.TransformColumnTypes( //изменяем тип данных",
+                "        select_columns,",
+                "        {",
+                "            {\"дата\", type date},",
+                "            {\"проект_key\", type text},",
+                "            {\"организация_key\", type text},",
+                "            {\"классификатор_key\", type text},",
+                "            {\"типовые_key\", type text},",
+                "            {\"часы\", type number}",
+                "        }",
+                "    )",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ]
+      },
+      {
+        "name": "ключевые часы",
+        "lineageTag": "ae09d516-a19a-4ebe-b72a-1e25aaaeaf9d",
+        "columns": [
+          {
+            "name": "дата",
+            "dataType": "dateTime",
+            "sourceColumn": "дата",
+            "formatString": "Long Date",
+            "lineageTag": "e2eab125-d116-48cb-adc7-6bf86ff40377",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"D\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект_key",
+            "dataType": "string",
+            "sourceColumn": "проект_key",
+            "lineageTag": "a4c7b34e-6eb6-4aeb-b048-e2b23e60001b",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "люди",
+            "dataType": "double",
+            "sourceColumn": "люди",
+            "lineageTag": "8a07d9a1-945f-413a-baa1-8e26f822ab40",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "люди"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "часы",
+            "dataType": "double",
+            "sourceColumn": "часы",
+            "lineageTag": "fb5ca59e-4dda-4e45-88c0-dc1daf3b4f2f",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "часы"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация_key",
+            "dataType": "string",
+            "sourceColumn": "организация_key",
+            "lineageTag": "31961225-f6bb-4237-92c6-57b060593823",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "ключевые_key",
+            "dataType": "string",
+            "sourceColumn": "ключевые_key",
+            "lineageTag": "f83f005a-98aa-448f-ac92-e789d7374967",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "ключевые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые_key",
+            "dataType": "string",
+            "sourceColumn": "типовые_key",
+            "lineageTag": "d1b80f5f-4624-4219-8960-12befda82af7",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ключевые часы-b5a10eee-7fa7-4ead-9271-8416bd201552",
+            "mode": "import",
+            "queryGroup": "fact",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    объединяем таблицы ключевых часов часов из баз ключевых",
+                " */",
+                "let",
+                "    source = #\"_содержимое_ключевые\", //ссылка на шаг в котором извлечено содержимое баз ключевых часов",
+                "    filter_data = Table.SelectRows(source,  each [Item] = \"ключевые_часы\"), //оставляем таблицы c ключевыми часами",
+                "    combine_tables = Table.Combine(filter_data[Data]), //объединяем таблицы",
+                "    select_columns = Table.SelectColumns( //выбираем требуемые поля",
+                "        combine_tables,",
+                "       {",
+                "            \"дата\",",
+                "            \"проект_key\",",
+                "            \"организация_key\",",
+                "            \"ключевые_key\",",
+                "            \"типовые_key\",",
+                "            \"люди\",",
+                "            \"часы\"",
+                "        }",
+                "    ),",
+                "    change_dtype = Table.TransformColumnTypes( //изменяем тип данных",
+                "        select_columns,",
+                "        {",
+                "            {\"дата\", type date},",
+                "            {\"проект_key\", type text},",
+                "            {\"организация_key\", type text},",
+                "            {\"ключевые_key\", type text},",
+                "            {\"типовые_key\", type text},",
+                "            {\"люди\", type number},",
+                "            {\"часы\", type number}",
+                "        }",
+                "    )",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "ключевые объемы",
+        "lineageTag": "a774b157-13db-4487-bde3-43ce85e55e72",
+        "columns": [
+          {
+            "name": "дата",
+            "dataType": "dateTime",
+            "sourceColumn": "дата",
+            "formatString": "Long Date",
+            "lineageTag": "0f1783b4-c909-4931-82dd-eafe84309f7e",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"D\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект_key",
+            "dataType": "string",
+            "sourceColumn": "проект_key",
+            "lineageTag": "1ded4f1c-0e41-4234-a818-f9473001d7b5",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "объем",
+            "dataType": "double",
+            "sourceColumn": "объем",
+            "lineageTag": "c918e102-9d6e-4787-8682-2464b01b52d6",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "объем"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация_key",
+            "dataType": "string",
+            "sourceColumn": "организация_key",
+            "lineageTag": "aa26e3ca-7c2d-4274-bbe4-e634645ecf97",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "ключевые_key",
+            "dataType": "string",
+            "sourceColumn": "ключевые_key",
+            "lineageTag": "9ba910ca-410a-4c2c-a99a-5ab365129e9f",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "ключевые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые_key",
+            "dataType": "string",
+            "sourceColumn": "типовые_key",
+            "lineageTag": "f1ee180b-fc12-449e-a568-d355dea168b6",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ключевые объемы-b4d40d73-04e1-474d-84b2-275269e1d350",
+            "mode": "import",
+            "queryGroup": "fact",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    объединяем таблицы ключевых объемов из баз ключевых",
+                " */",
+                "let",
+                "    source = #\"_содержимое_ключевые\", //ссылка на шаг в котором извлечено содержимое баз ключевых объемов",
+                "    filter_data = Table.SelectRows(source,  each [Item] = \"ключевые_объемы\"), //оставляем таблицы c ключевыми объемами",
+                "    combine_tables = Table.Combine(filter_data[Data]), //объединяем таблицы",
+                "    select_columns = Table.SelectColumns( //выбираем требуемые поля",
+                "        combine_tables,",
+                "       {",
+                "            \"дата\",",
+                "            \"проект_key\",",
+                "            \"организация_key\",",
+                "            \"ключевые_key\",",
+                "            \"типовые_key\",",
+                "            \"объем\"",
+                "        }",
+                "    ),",
+                "    change_dtype = Table.TransformColumnTypes( //изменяем тип данных",
+                "        select_columns,",
+                "        {",
+                "            {\"дата\", type date},",
+                "            {\"проект_key\", type text},",
+                "            {\"организация_key\", type text},",
+                "            {\"ключевые_key\", type text},",
+                "            {\"типовые_key\", type text},",
+                "            {\"объем\", type number}",
+                "        }",
+                "    )",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "проект",
+        "lineageTag": "ccf9af94-8bbe-47d5-95b2-a7b30b39a5de",
+        "columns": [
+          {
+            "name": "проект_key",
+            "dataType": "string",
+            "sourceColumn": "проект_key",
+            "lineageTag": "bf7f4afd-f524-4438-804d-506fadc31d0c",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект краткий",
+            "dataType": "string",
+            "sourceColumn": "проект краткий",
+            "sortByColumn": "проект_sort",
+            "lineageTag": "4b21a115-0fa8-4de9-95e2-6c093bb11a3e",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект краткий"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект",
+            "dataType": "string",
+            "sourceColumn": "проект",
+            "lineageTag": "62b0c176-237a-400c-b499-229afea79b8d",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "подпроект",
+            "dataType": "string",
+            "sourceColumn": "подпроект",
+            "lineageTag": "151ca6cc-5844-4b8d-90dd-3f681ce6ef61",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "подпроект"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект_sort",
+            "dataType": "string",
+            "sourceColumn": "проект_sort",
+            "lineageTag": "09702f52-ed27-466c-a302-37b05e2d123c",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "подпроект_sort",
+            "dataType": "string",
+            "sourceColumn": "подпроект_sort",
+            "lineageTag": "1d8cef91-1222-45d4-a3fa-2ba522e74a2e",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "подпроект_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "проект-2ab7a8ce-4036-4db3-b180-a6d98890f095",
+            "mode": "import",
+            "queryGroup": "dim",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    из файла схема загружаем таблицу с \"проект\"",
+                " */",
+                "let",
+                "    source = #\"_содержимое_схемы\"{[Item=\"проект\",Kind=\"Table\"]}[Data], //загружаем таблицу проект",
+                "    select_cols = Table.SelectColumns( //выбираем нужные поля",
+                "        source, ",
+                "        {",
+                "            \"проект_key\",",
+                "            \"проект\",",
+                "            \"проект краткий\",",
+                "            \"подпроект\",",
+                "            \"проект_sort\",",
+                "            \"подпроект_sort\"",
+                "        }",
+                "    ) ",
+                "in",
+                "    select_cols"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "организация",
+        "lineageTag": "93af9e2e-4fcc-4599-9580-b48773d8cffb",
+        "columns": [
+          {
+            "name": "организация_key",
+            "dataType": "string",
+            "sourceColumn": "организация_key",
+            "lineageTag": "fd2a312f-23e3-4b34-9e8e-986cf158546c",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация",
+            "dataType": "string",
+            "sourceColumn": "организация",
+            "lineageTag": "7fe46555-e9d9-4d8d-890b-fab15e21414d",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация_sort",
+            "dataType": "string",
+            "sourceColumn": "организация_sort",
+            "lineageTag": "22bd19e6-d25a-4048-bd68-803680033dc1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "организация-003e024b-0740-4da1-8927-7bd13b82226f",
+            "mode": "import",
+            "queryGroup": "dim",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    из файла схема загружаем таблицу \"организация\"",
+                " */",
+                "let",
+                "    source = #\"_содержимое_схемы\"{[Item=\"организация\",Kind=\"Table\"]}[Data], //загружаем таблицу организация",
+                "    select_cols = Table.SelectColumns( //выбираем нужные поля",
+                "        source, ",
+                "        {",
+                "            \"организация_key\",",
+                "            \"организация\",",
+                "            \"организация_sort\"",
+                "        }",
+                "    ) ",
+                "in",
+                "    select_cols"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "типовые",
+        "lineageTag": "5dd84f75-314f-4a40-b223-5a2a504e2890",
+        "columns": [
+          {
+            "name": "типовые",
+            "dataType": "string",
+            "sourceColumn": "типовые",
+            "lineageTag": "df4945dc-4c23-4f38-b560-7e99728f2162",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые наименование",
+            "dataType": "string",
+            "sourceColumn": "типовые наименование",
+            "lineageTag": "bc53a195-354a-49f1-b55d-bebed94ef8d3",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые наименование"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "ед изм",
+            "dataType": "string",
+            "sourceColumn": "ед изм",
+            "lineageTag": "9eed2866-6a6c-416b-929b-a3c69a5eaa42",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур0 наименование",
+            "dataType": "string",
+            "sourceColumn": "типовые ур0 наименование",
+            "sortByColumn": "типовые ур0 наименование_sort",
+            "lineageTag": "f5dde211-3ed3-408b-a7ba-4fdfb8b60db7",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур0 наименование"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур0 вед поз",
+            "dataType": "string",
+            "sourceColumn": "типовые ур0 вед поз",
+            "lineageTag": "78baf19d-6cc2-4d8e-8ebf-141cebf29b14",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур0 вед поз"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур1 наименование",
+            "dataType": "string",
+            "sourceColumn": "типовые ур1 наименование",
+            "sortByColumn": "типовые ур1 наименование_sort",
+            "lineageTag": "69005133-5192-4151-80c3-7732d4137739",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур1 наименование"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур1 вед поз",
+            "dataType": "string",
+            "sourceColumn": "типовые ур1 вед поз",
+            "lineageTag": "a321e4ae-e8a4-4921-894d-e48ba517fcfa",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур1 вед поз"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур2 наименование",
+            "dataType": "string",
+            "sourceColumn": "типовые ур2 наименование",
+            "sortByColumn": "типовые ур2 наименование_sort",
+            "lineageTag": "3ad0ed6a-3f34-4068-afac-fae6e7acf1f4",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур2 наименование"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур2 вед поз",
+            "dataType": "string",
+            "sourceColumn": "типовые ур2 вед поз",
+            "lineageTag": "ba6b73d2-211f-4486-9ee7-de938c4377be",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур2 вед поз"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур3 наименование",
+            "dataType": "string",
+            "sourceColumn": "типовые ур3 наименование",
+            "sortByColumn": "типовые ур3 наименование_sort",
+            "lineageTag": "327ac2ea-9867-4c47-987c-3e069b6c5375",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур3 наименование"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур3 вед поз",
+            "dataType": "string",
+            "sourceColumn": "типовые ур3 вед поз",
+            "lineageTag": "b4faeb59-0e86-4811-b4c6-f744ed482b33",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур3 вед поз"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур4 наименование",
+            "dataType": "string",
+            "sourceColumn": "типовые ур4 наименование",
+            "sortByColumn": "типовые ур4 наименование_sort",
+            "lineageTag": "e40dc563-dbba-4742-95d4-2e79a61cd7ce",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур4 наименование"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур глубина",
+            "dataType": "double",
+            "sourceColumn": "типовые ур глубина",
+            "lineageTag": "9bc1c63c-8935-438e-a852-a10311a1d91f",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур глубина"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые наименование с ед изм",
+            "dataType": "string",
+            "sourceColumn": "типовые наименование с ед изм",
+            "lineageTag": "61317463-6550-4f16-9d3d-e7d254470e6a",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые наименование с ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые наименование с ед изм и кодом",
+            "dataType": "string",
+            "sourceColumn": "типовые наименование с ед изм и кодом",
+            "lineageTag": "b9e6f56b-aa16-4445-a854-7716e706a704",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые наименование с ед изм и кодом"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур0 наименование с ед изм",
+            "dataType": "string",
+            "sourceColumn": "типовые ур0 наименование с ед изм",
+            "sortByColumn": "типовые ур0 наименование с ед изм_sort",
+            "lineageTag": "b0b00ecf-3220-4490-87e3-96aae07bf543",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур0 наименование с ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур0 наименование с ед изм и кодом",
+            "dataType": "string",
+            "sourceColumn": "типовые ур0 наименование с ед изм и кодом",
+            "lineageTag": "b188dba0-ded5-4999-878c-af4037c09115",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур0 наименование с ед изм и кодом"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур1 наименование с ед изм",
+            "dataType": "string",
+            "sourceColumn": "типовые ур1 наименование с ед изм",
+            "sortByColumn": "типовые ур1 наименование с ед изм_sort",
+            "lineageTag": "b8dabd78-fbfa-4bd8-bb56-5ed86cd87b65",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур1 наименование с ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур1 наименование с ед изм и кодом",
+            "dataType": "string",
+            "sourceColumn": "типовые ур1 наименование с ед изм и кодом",
+            "lineageTag": "cc25cd66-e45b-4ba1-8762-d0eb7822f1e1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур1 наименование с ед изм и кодом"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур2 наименование с ед изм",
+            "dataType": "string",
+            "sourceColumn": "типовые ур2 наименование с ед изм",
+            "sortByColumn": "типовые ур2 наименование с ед изм_sort",
+            "lineageTag": "f8daa0c1-6d07-457b-a721-1c597dda35a8",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур2 наименование с ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур2 наименование с ед изм и кодом",
+            "dataType": "string",
+            "sourceColumn": "типовые ур2 наименование с ед изм и кодом",
+            "lineageTag": "93f200b6-37d8-4d97-9a46-2404b1ae6c64",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур2 наименование с ед изм и кодом"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур3 наименование с ед изм",
+            "dataType": "string",
+            "sourceColumn": "типовые ур3 наименование с ед изм",
+            "sortByColumn": "типовые ур3 наименование с ед изм_sort",
+            "lineageTag": "dde0b147-f032-4078-8bdf-20845ffa25dc",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур3 наименование с ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур3 наименование с ед изм и кодом",
+            "dataType": "string",
+            "sourceColumn": "типовые ур3 наименование с ед изм и кодом",
+            "lineageTag": "ac37bb79-640b-4022-9931-97a3bb9103db",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур3 наименование с ед изм и кодом"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур4 наименование с ед изм",
+            "dataType": "string",
+            "sourceColumn": "типовые ур4 наименование с ед изм",
+            "sortByColumn": "типовые ур4 наименование с ед изм_sort",
+            "lineageTag": "3841054c-de95-4d87-b3c5-33eb63c5dc50",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур4 наименование с ед изм"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур4 наименование с ед изм и кодом",
+            "dataType": "string",
+            "sourceColumn": "типовые ур4 наименование с ед изм и кодом",
+            "lineageTag": "a186e153-169e-4d43-ad18-3efc81c40dd3",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур4 наименование с ед изм и кодом"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур0 наименование с ед изм_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур0 наименование с ед изм_sort",
+            "formatString": "0",
+            "lineageTag": "0ea56c35-ca36-4896-bcc6-85cd8d9098cf",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур0 наименование с ед изм_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур1 наименование с ед изм_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур1 наименование с ед изм_sort",
+            "formatString": "0",
+            "lineageTag": "cf411038-f9af-4d58-9d8d-6b7a9ee4fb64",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур1 наименование с ед изм_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур2 наименование с ед изм_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур2 наименование с ед изм_sort",
+            "formatString": "0",
+            "lineageTag": "b99639bc-6409-4335-9a3b-4df607caa453",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур2 наименование с ед изм_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур3 наименование с ед изм_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур3 наименование с ед изм_sort",
+            "formatString": "0",
+            "lineageTag": "72994c52-004a-492e-918b-77b962072e0d",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур3 наименование с ед изм_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур4 наименование с ед изм_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур4 наименование с ед изм_sort",
+            "formatString": "0",
+            "lineageTag": "a06d2a4b-205b-490d-a793-9b93516570f6",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур4 наименование с ед изм_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур4 вед поз",
+            "dataType": "string",
+            "sourceColumn": "типовые ур4 вед поз",
+            "lineageTag": "abb9b2b4-c2c6-45b0-96b5-9c55bf205041",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур4 вед поз"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "время обновления google",
+            "dataType": "string",
+            "sourceColumn": "время обновления google",
+            "lineageTag": "cd4d3667-4ef0-45bb-8d2f-df7b76df055a",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "время обновления google"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые_key",
+            "dataType": "string",
+            "sourceColumn": "типовые_key",
+            "lineageTag": "64d3cbfb-2507-4c33-b173-73e5168c9e75",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур0 наименование_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур0 наименование_sort",
+            "lineageTag": "3037734e-007c-478a-86f0-ba6a1aadf7f1",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур0 наименование_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур1 наименование_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур1 наименование_sort",
+            "lineageTag": "b87ee5bd-2ec7-4b3f-adda-c8c0f0eb3eff",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур1 наименование_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур2 наименование_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур2 наименование_sort",
+            "lineageTag": "2d66ad90-e2b6-41a8-920c-90fecbe06a77",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур2 наименование_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур3 наименование_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур3 наименование_sort",
+            "lineageTag": "089bd4a3-492b-4e70-b5b5-f34099da6efc",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур3 наименование_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "типовые ур4 наименование_sort",
+            "dataType": "double",
+            "sourceColumn": "типовые ур4 наименование_sort",
+            "lineageTag": "98935c82-4332-447e-8c43-e71d7b94942a",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "типовые ур4 наименование_sort"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "типовые-c455438d-7107-4a78-8e99-e8fa78796481",
+            "mode": "import",
+            "queryGroup": "dim",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    из файла схема загружаем таблицу с \"типовые\"",
+                " */",
+                "let",
+                "    source = #\"_содержимое_схемы\"{[Item=\"типовые\",Kind=\"Table\"]}[Data], //загружаем таблицу типовые",
+                "    select_cols = Table.SelectColumns( //выбираем нужные поля",
+                "        source, ",
+                "            {",
+                "                \"типовые_key\",",
+                "                \"типовые\",",
+                "                \"ед изм\",",
+                "                \"типовые ур глубина\",",
+                "                \"типовые наименование\",",
+                "                \"типовые наименование с ед изм\",",
+                "                \"типовые наименование с ед изм и кодом\",",
+                "                \"типовые ур0 наименование\",",
+                "                \"типовые ур0 наименование с ед изм\",",
+                "                \"типовые ур0 наименование с ед изм и кодом\",",
+                "                \"типовые ур0 вед поз\",",
+                "                \"типовые ур1 наименование\",",
+                "                \"типовые ур1 наименование с ед изм\",",
+                "                \"типовые ур1 наименование с ед изм и кодом\",",
+                "                \"типовые ур1 вед поз\",",
+                "                \"типовые ур2 наименование\",",
+                "                \"типовые ур2 наименование с ед изм\",",
+                "                \"типовые ур2 наименование с ед изм и кодом\",",
+                "                \"типовые ур2 вед поз\",",
+                "                \"типовые ур3 наименование\",",
+                "                \"типовые ур3 наименование с ед изм\",",
+                "                \"типовые ур3 наименование с ед изм и кодом\",",
+                "                \"типовые ур3 вед поз\",",
+                "                \"типовые ур4 наименование\",",
+                "                \"типовые ур4 наименование с ед изм\",",
+                "                \"типовые ур4 наименование с ед изм и кодом\",",
+                "                \"типовые ур4 вед поз\",",
+                "                \"типовые ур0 наименование_sort\",",
+                "                \"типовые ур1 наименование_sort\",",
+                "                \"типовые ур2 наименование_sort\",",
+                "                \"типовые ур3 наименование_sort\",",
+                "                \"типовые ур4 наименование_sort\",",
+                "                \"типовые ур0 наименование с ед изм_sort\",",
+                "                \"типовые ур1 наименование с ед изм_sort\",",
+                "                \"типовые ур2 наименование с ед изм_sort\",",
+                "                \"типовые ур3 наименование с ед изм_sort\",",
+                "                \"типовые ур4 наименование с ед изм_sort\",",
+                "                \"время обновления google\"",
+                "            }",
+                "    ),",
+                "    change_dtype = Table.TransformColumnTypes( //изменяем тип данных",
+                "        select_cols,",
+                "        {",
+                "            {\"типовые_key\", type text},",
+                "            {\"типовые\", type text},",
+                "            {\"ед изм\", type text},",
+                "            {\"типовые ур глубина\", type number},",
+                "            {\"типовые наименование\", type text},",
+                "            {\"типовые наименование с ед изм\", type text},",
+                "            {\"типовые наименование с ед изм и кодом\", type text},",
+                "            {\"типовые ур0 наименование\", type text},",
+                "            {\"типовые ур0 наименование с ед изм\", type text},",
+                "            {\"типовые ур0 наименование с ед изм и кодом\", type text},",
+                "            {\"типовые ур0 вед поз\", type text},",
+                "            {\"типовые ур1 наименование\", type text},",
+                "            {\"типовые ур1 наименование с ед изм\", type text},",
+                "            {\"типовые ур1 наименование с ед изм и кодом\", type text},",
+                "            {\"типовые ур1 вед поз\", type text},",
+                "            {\"типовые ур2 наименование\", type text},",
+                "            {\"типовые ур2 наименование с ед изм\", type text},",
+                "            {\"типовые ур2 наименование с ед изм и кодом\", type text},",
+                "            {\"типовые ур2 вед поз\", type text},",
+                "            {\"типовые ур3 наименование\", type text},",
+                "            {\"типовые ур3 наименование с ед изм\", type text},",
+                "            {\"типовые ур3 наименование с ед изм и кодом\", type text},",
+                "            {\"типовые ур3 вед поз\", type text},",
+                "            {\"типовые ур4 наименование\", type text},",
+                "            {\"типовые ур4 наименование с ед изм\", type text},",
+                "            {\"типовые ур4 наименование с ед изм и кодом\", type text},",
+                "            {\"типовые ур4 вед поз\", type text},",
+                "            {\"типовые ур0 наименование_sort\", type number},",
+                "            {\"типовые ур1 наименование_sort\", type number},",
+                "            {\"типовые ур2 наименование_sort\", type number},",
+                "            {\"типовые ур3 наименование_sort\", type number},",
+                "            {\"типовые ур4 наименование_sort\", type number},",
+                "            {\"типовые ур0 наименование с ед изм_sort\", type number},",
+                "            {\"типовые ур1 наименование с ед изм_sort\", type number},",
+                "            {\"типовые ур2 наименование с ед изм_sort\", type number},",
+                "            {\"типовые ур3 наименование с ед изм_sort\", type number},",
+                "            {\"типовые ур4 наименование с ед изм_sort\", type number}",
+                "        }",
+                "    )",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "типовые с ед изм",
+            "lineageTag": "1c9a9c58-8817-4b27-8657-291e4ba59b17",
+            "levels": [
+              {
+                "name": "типовые ур0 наименование с ед изм",
+                "ordinal": 0,
+                "column": "типовые ур0 наименование с ед изм",
+                "lineageTag": "f9a302a2-bcc7-4107-bda5-ea1b5e816065"
+              },
+              {
+                "name": "типовые ур1 наименование с ед изм",
+                "ordinal": 1,
+                "column": "типовые ур1 наименование с ед изм",
+                "lineageTag": "e198e1c0-cd37-40f0-82a2-27fe2d5143eb"
+              },
+              {
+                "name": "типовые ур2 наименование с ед изм",
+                "ordinal": 2,
+                "column": "типовые ур2 наименование с ед изм",
+                "lineageTag": "c86c21a8-dd02-4925-bb9b-d63911e50bee"
+              },
+              {
+                "name": "типовые ур3 наименование с ед изм",
+                "ordinal": 3,
+                "column": "типовые ур3 наименование с ед изм",
+                "lineageTag": "1dda8ca2-0e51-426c-a081-8cfaf6fff6dc"
+              },
+              {
+                "name": "типовые ур4 наименование с ед изм",
+                "ordinal": 4,
+                "column": "типовые ур4 наименование с ед изм",
+                "lineageTag": "84937910-c035-4c35-bb84-1e3f6b9372ab"
+              }
+            ]
+          },
+          {
+            "name": "типовые с ед изм и кодом",
+            "lineageTag": "304e0c01-b0ad-4927-b5d4-a603e528e3f1",
+            "levels": [
+              {
+                "name": "типовые ур0 наименование с ед изм и кодом",
+                "ordinal": 0,
+                "column": "типовые ур0 наименование с ед изм и кодом",
+                "lineageTag": "bd6901b3-173e-4d03-bba4-e353487d3c09"
+              },
+              {
+                "name": "типовые ур1 наименование с ед изм и кодом",
+                "ordinal": 1,
+                "column": "типовые ур1 наименование с ед изм и кодом",
+                "lineageTag": "25d095cb-ac46-4cbf-959b-45e22876f868"
+              },
+              {
+                "name": "типовые ур2 наименование с ед изм и кодом",
+                "ordinal": 2,
+                "column": "типовые ур2 наименование с ед изм и кодом",
+                "lineageTag": "d836df0f-39bf-4142-8eaf-51a672bea503"
+              },
+              {
+                "name": "типовые ур3 наименование с ед изм и кодом",
+                "ordinal": 3,
+                "column": "типовые ур3 наименование с ед изм и кодом",
+                "lineageTag": "aec55e3b-8c0e-4a65-80df-3b5f8e1b7195"
+              },
+              {
+                "name": "типовые ур4 наименование с ед изм и кодом",
+                "ordinal": 4,
+                "column": "типовые ур4 наименование с ед изм и кодом",
+                "lineageTag": "2a7f0eef-88aa-4560-bfd6-9d454365a62d"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ]
+      },
+      {
+        "name": "календарь",
+        "lineageTag": "7c302974-1840-49d5-a0de-0220ced50e9f",
+        "columns": [
+          {
+            "name": "дата",
+            "dataType": "dateTime",
+            "sourceColumn": "дата",
+            "formatString": "Long Date",
+            "lineageTag": "3d8b88d2-1e44-499b-8a36-be44f37ac007",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"D\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "год_номер",
+            "dataType": "double",
+            "sourceColumn": "год_номер",
+            "formatString": "0",
+            "lineageTag": "cd042b57-29bd-40da-be93-4bd996bdc70b",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "год_номер"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "год",
+            "dataType": "string",
+            "sourceColumn": "год",
+            "sortByColumn": "год_номер",
+            "lineageTag": "39ee1609-dc90-4484-90ad-ba7936f60e51",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "год"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "месяц год_номер",
+            "dataType": "double",
+            "sourceColumn": "месяц год_номер",
+            "formatString": "0",
+            "lineageTag": "b6e6f6d8-4a54-4a76-8db4-f30b906fe2e0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "месяц год_номер"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "месяц год",
+            "dataType": "string",
+            "sourceColumn": "месяц год",
+            "sortByColumn": "месяц год_номер",
+            "lineageTag": "e0336864-5d78-4918-8c3b-c18ad2a98440",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "месяц год"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "месяц",
+            "dataType": "string",
+            "sourceColumn": "месяц",
+            "sortByColumn": "месяц_номер",
+            "lineageTag": "98e33200-c14b-4dcf-8c37-ee7abd793e7a",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "месяц"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "месяц_номер",
+            "dataType": "double",
+            "sourceColumn": "месяц_номер",
+            "lineageTag": "b7143393-362f-4e82-baeb-1bb24d97f2a0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "месяц_номер"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "календарь-b1527a3c-4d1c-465b-9b84-46fc1735ba70",
+            "mode": "import",
+            "queryGroup": "dim",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    из файла схема загружаем таблицу \"календарь\"",
+                " */",
+                "let",
+                "    source = #\"_содержимое_схемы\"{[Item=\"календарь\",Kind=\"Table\"]}[Data], //ссылка на предыдущий шаг, с содержимом файла схема",
+                "    select_cols = Table.SelectColumns(",
+                "        source, ",
+                "        {",
+                "            \"дата\", ",
+                "            \"год\",",
+                "            \"год_номер\",",
+                "            \"месяц\",",
+                "            \"месяц_номер\",",
+                "            \"месяц год\",",
+                "            \"месяц год_номер\"",
+                "        }",
+                "    ), //выюираем нужные поля",
+                "    change_dtype = Table.TransformColumnTypes(",
+                "        select_cols,",
+                "        {",
+                "            {\"дата\", type date},",
+                "            {\"год\", type text},",
+                "            {\"год_номер\", type number},",
+                "            {\"месяц\", type text},",
+                "            {\"месяц_номер\", type number},",
+                "            {\"месяц год\", type text},",
+                "            {\"месяц год_номер\", type number}",
+                "        }",
+                "    ) //изменяем тип данных",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ]
+      },
+      {
+        "name": "время обновления",
+        "lineageTag": "66253c0b-4557-4d43-8b43-e06c2e72f8f2",
+        "columns": [
+          {
+            "name": "дата время",
+            "dataType": "dateTime",
+            "sourceColumn": "дата время",
+            "formatString": "General Date",
+            "lineageTag": "1907869b-4a75-4107-abec-a903ebd1f15f",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата время"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "время обновления-a4948ac8-c86f-4aac-8415-e977bf0da07a",
+            "mode": "import",
+            "queryGroup": "метаданные",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    время обновления модели",
+                " */",
+                "let",
+                "    today_date = DateTime.Date(DateTime.LocalNow()) & DateTime.Time(DateTime.LocalNow()), //сегодняшняя дата и время",
+                "    create_table = #table(type table [#\"дата время\" = datetime], {{today_date}}) //создаем таблицы с датой и временем",
+                "in",
+                "create_table"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "_measures",
+        "lineageTag": "5024e89a-039f-491d-845b-68fab9156205",
+        "columns": [
+          {
+            "name": "measures",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "measures",
+            "lineageTag": "1ed62ff6-e125-4275-96f0-74f17280d4b9",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "measures"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_measures-19df48d5-1ada-44ae-be67-4c51d0e4b8f5",
+            "mode": "import",
+            "queryGroup": "метаданные",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [measures = _t])",
+                "in",
+                "    Source"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "_tipovie_hierarchy",
+            "expression": [
+              "VAR _is_tipovie_lvl4_in_scope = --смотрим факт группировки отчета по иерархии типовых позиций",
+              "    ISINSCOPE('типовые'[типовые ур4 наименование]) ||",
+              "    ISINSCOPE('типовые'[типовые ур4 наименование с ед изм]) ||",
+              "    ISINSCOPE('типовые'[типовые ур4 наименование с ед изм и кодом])",
+              "VAR _is_tipovie_lvl3_in_scope = ",
+              "    ISINSCOPE('типовые'[типовые ур3 наименование]) ||",
+              "    ISINSCOPE('типовые'[типовые ур3 наименование с ед изм]) ||",
+              "    ISINSCOPE('типовые'[типовые ур3 наименование с ед изм и кодом])",
+              "VAR _is_tipovie_lvl2_in_scope = ",
+              "    ISINSCOPE('типовые'[типовые ур2 наименование]) ||",
+              "    ISINSCOPE('типовые'[типовые ур2 наименование с ед изм]) ||",
+              "    ISINSCOPE('типовые'[типовые ур2 наименование с ед изм и кодом])",
+              "VAR _is_tipovie_lvl1_in_scope = ",
+              "    ISINSCOPE('типовые'[типовые ур1 наименование]) ||",
+              "    ISINSCOPE('типовые'[типовые ур1 наименование с ед изм]) ||",
+              "    ISINSCOPE('типовые'[типовые ур1 наименование с ед изм и кодом])",
+              "VAR _is_tipovie_lvl0_in_scope = ",
+              "    ISINSCOPE('типовые'[типовые ур0 наименование]) ||",
+              "    ISINSCOPE('типовые'[типовые ур0 наименование с ед изм]) ||",
+              "    ISINSCOPE('типовые'[типовые ур0 наименование с ед изм и кодом])",
+              "VAR _browsing_lvl = ",
+              "    SWITCH( --выводим уровень группировки",
+              "        TRUE(),",
+              "        _is_tipovie_lvl4_in_scope, \"типовые ур4\", --проверяем с самого вложенного уровня, т.к. группировка нижнего уровня",
+              "        _is_tipovie_lvl3_in_scope, \"типовые ур3\", --атоматически означает группировку по верхнему уровню",
+              "        _is_tipovie_lvl2_in_scope, \"типовые ур2\", --но не наоборот",
+              "        _is_tipovie_lvl1_in_scope, \"типовые ур1\",",
+              "        _is_tipovie_lvl0_in_scope, \"типовые ур0\",",
+              "        \"без фильтра\"",
+              "    )",
+              "RETURN _browsing_lvl"
+            ],
+            "lineageTag": "687ccf8d-88d1-4d48-90fb-cc63b70bf3be",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              }
+            ]
+          },
+          {
+            "name": "_tipovie_browse_depth",
+            "expression": [
+              "    ISINSCOPE('типовые'[типовые ур4 наименование]) + --проверяем группировку в визуализации",
+              "    ISINSCOPE('типовые'[типовые ур4 наименование с ед изм]) + --если уровень раскрыт -> 1",
+              "    ISINSCOPE('типовые'[типовые ур4 наименование с ед изм и кодом]) + --если скрыт -> 0",
+              "    ISINSCOPE('типовые'[типовые ур3 наименование]) +",
+              "    ISINSCOPE('типовые'[типовые ур3 наименование с ед изм]) +",
+              "    ISINSCOPE('типовые'[типовые ур3 наименование с ед изм и кодом]) +",
+              "    ISINSCOPE('типовые'[типовые ур2 наименование]) +",
+              "    ISINSCOPE('типовые'[типовые ур2 наименование с ед изм]) +",
+              "    ISINSCOPE('типовые'[типовые ур2 наименование с ед изм и кодом]) +",
+              "    ISINSCOPE('типовые'[типовые ур1 наименование]) +",
+              "    ISINSCOPE('типовые'[типовые ур1 наименование с ед изм]) +",
+              "    ISINSCOPE('типовые'[типовые ур1 наименование с ед изм и кодом]) +",
+              "    ISINSCOPE('типовые'[типовые ур0 наименование]) +",
+              "    ISINSCOPE('типовые'[типовые ур0 наименование с ед изм]) +",
+              "    ISINSCOPE('типовые'[типовые ур0 наименование с ед изм и кодом]) --на итог получаем просматриваемый уровень по типовым позициям"
+            ],
+            "lineageTag": "b35e6ad3-743b-48e0-8dc5-9f724d3b6f9b"
+          },
+          {
+            "name": "_tipovie_row_depth",
+            "expression": "MAX('типовые'[типовые ур глубина]) --максимальный выидимый уровень типовой позиции",
+            "lineageTag": "309a7dc2-3e41-47b1-bc97-3e9179bfde73"
+          },
+          {
+            "name": "нормочасы ет1",
+            "expression": [
+              "VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth] --показываем метрику только для существующего уровня типовых",
+              "VAR _amt = SUM('факт'[нормочасы])",
+              "VAR _result = IF(_entity_show_row, _amt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "0705b916-9f18-4c85-b568-6bcd09ae62bc"
+          },
+          {
+            "name": "нормочасы ет1 зим",
+            "expression": [
+              "VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth] --показываем метрику только для существующего уровня типовых",
+              "VAR _amt = SUM('факт'[нормочасы зимний])",
+              "VAR _result = IF(_entity_show_row, _amt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "42b91ffa-6817-42e5-a6c7-05bc0b1753b8"
+          },
+          {
+            "name": "часы ет1",
+            "expression": [
+              "VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth] --показываем метрику только для существующего уровня типовых",
+              "VAR _amt = SUM('факт'[часы]) --часы по ет1",
+              "VAR _result = IF(_entity_show_row, _amt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "5e26096a-9f95-4106-9cf1-6a49668d7c37"
+          },
+          {
+            "name": "часы доп.",
+            "expression": [
+              "VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth] --показываем метрику только для существующего уровня типовых",
+              "VAR _amt = SUM('дополнительные часы'[часы])",
+              "VAR _result = IF(_entity_show_row, _amt) --если фильтр на справочнике типовых отсутствует, условие выполняется автоматически",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "476ded0a-98a4-450e-9aba-f71fa48d251e"
+          },
+          {
+            "name": "часы ключ.",
+            "expression": [
+              "VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth]",
+              "VAR _amt = SUM('ключевые часы'[часы])",
+              "VAR _result = IF(_entity_show_row, _amt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "95cd0e72-46a9-4593-8a8e-b5b376755052"
+          },
+          {
+            "name": "часы ет1 + доп.",
+            "expression": [
+              "VAR _amt = [часы ет1] + [часы доп.] --итого фактических часов",
+              "    VAR _result =",
+              "            SWITCH (",
+              "                [_tipovie_hierarchy],",
+              "                \"типовые ур0\",_amt, --выводим для 0 уровня",
+              "                \"без фильтра\",_amt --или при отсутствии группировки по типовым",
+              "                ",
+              "            )    ",
+              "    RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "eb166a2e-24e3-4314-8007-a6484d477298"
+          },
+          {
+            "name": "часы доп. % факт",
+            "expression": [
+              "VAR _pct = DIVIDE([часы доп.], [часы ет1]) --процент дополнительных часов от часов по ет1",
+              "    VAR _result =",
+              "            SWITCH (",
+              "                [_tipovie_hierarchy],",
+              "                \"типовые ур0\", _pct --выводим процент по доп часам на 0 уровень",
+              "            )   ",
+              "    RETURN _result "
+            ],
+            "formatString": "#,##0 %",
+            "lineageTag": "b8b4fc8c-7db4-402e-b308-c9d3ce0c221a"
+          },
+          {
+            "name": "дельта ключевые часы - факт + доп",
+            "expression": [
+              "VAR _value_to_compare = [часы ключ.]",
+              "\tVAR _base_value = [часы ет1 + доп.]",
+              "\tVAR _delta = _value_to_compare - _base_value",
+              "\tRETURN",
+              "\t\tIF(",
+              "\t\t\tNOT(ISBLANK(_value_to_compare))",
+              "\t\t\t\t&& NOT(ISBLANK(_base_value)),",
+              "\t\t\t\t_delta",
+              "\t\t\t)"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "1e8d253f-4ba5-4552-bc82-e69e56d590cf"
+          },
+          {
+            "name": "дельта ключевые объем - факт типовые",
+            "expression": [
+              "    VAR _value_to_compare = [ключевые объем типовые]",
+              "    VAR _base_value = [объем типовые]",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF(",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "4e1c42b5-4d10-4c22-95a4-2620edd82662"
+          },
+          {
+            "name": "дельта ключевые часы % факт + доп",
+            "expression": "DIVIDE([дельта ключевые часы - факт + доп], [часы ет1 + доп.])",
+            "formatString": "0%;-0%;0%",
+            "lineageTag": "98733133-0c9e-467a-860c-1f2feb370e05",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Percentage\" Accuracy=\"0\" />"
+              }
+            ]
+          },
+          {
+            "name": "дельта ключевые объемы % факт",
+            "expression": "DIVIDE([дельта ключевые объем - факт типовые], [объем типовые])",
+            "lineageTag": "20174570-f652-48c8-934b-134f84f773a1"
+          },
+          {
+            "name": "дельта факт часы - нормочасы",
+            "expression": [
+              "    VAR _value_to_compare = [часы ет1 ]",
+              "    VAR _base_value = [нормочасы ет1]",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF(",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "debab809-9136-41ba-ab04-b27a615bcd4e"
+          },
+          {
+            "name": "дельта факт часы - нормочасы зимний",
+            "expression": [
+              "    VAR _value_to_compare = [часы ет1]",
+              "    VAR _base_value = [нормочасы ет1 зим]",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF(",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "e9cc0f58-d828-425c-be7e-3c4d0d20b2fd"
+          },
+          {
+            "name": "дельта факт + доп часы - нормочасы",
+            "expression": [
+              "    VAR _value_to_compare = [часы ет1 итого ]",
+              "    VAR _base_value = [нормочасы ет1]",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF(",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "5ae69a9d-47dc-46c4-99e2-b346f31ba647"
+          },
+          {
+            "name": "дельта факт + доп часы - нормочасы зимний",
+            "expression": [
+              "    VAR _value_to_compare = [часы ет1 + доп.]",
+              "    VAR _base_value = [нормочасы ет1 зим]",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF(",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "4274d057-fb6a-4c88-b3a8-b1c96555be66"
+          },
+          {
+            "name": "дельта факт часы % нормочасы",
+            "expression": "DIVIDE([дельта факт часы - нормочасы], [нормочасы ет1 ])",
+            "lineageTag": "da7da86c-18f5-494f-866d-3f6128526986"
+          },
+          {
+            "name": "дельта факт часы % нормочасы зимний",
+            "expression": "DIVIDE([дельта факт часы - нормочасы зимний], [нормочасы ет1 зим])",
+            "lineageTag": "58a8dc0d-7315-4384-a41e-6a0fba435571"
+          },
+          {
+            "name": "дельта факт часы + доп % нормочасы",
+            "expression": "DIVIDE([дельта факт + доп часы - нормочасы], [нормочасы ет1])",
+            "lineageTag": "45b2d817-eaca-4ff0-9344-4fd52bf58cad"
+          },
+          {
+            "name": "дельта факт часы + доп % нормочасы зимний",
+            "expression": "DIVIDE([дельта факт + доп часы - нормочасы зимний], [нормочасы ет1 зим])",
+            "lineageTag": "60571e2d-919d-4a5a-8c70-0b8f950db9f3"
+          },
+          {
+            "name": "норма ет1 типовые",
+            "expression": "DIVIDE([часы ет1], [объем типовые])",
+            "formatString": "#,##0.00",
+            "lineageTag": "79c5df60-518b-499b-a9ac-8113fafc223d"
+          },
+          {
+            "name": "норма ет1 + доп типовые",
+            "expression": "DIVIDE([часы ет1 + доп.], [объем типовые])",
+            "formatString": "#,##0.00",
+            "lineageTag": "6c15ca24-4757-4dc1-ac66-ab50d9a91e70"
+          },
+          {
+            "name": "ключевые норма типовые",
+            "expression": "DIVIDE([часы ключ.], [ключевые объем типовые])",
+            "formatString": "#,##0.00",
+            "lineageTag": "95674701-2a0b-4b68-8b9d-78c03cc9d238"
+          },
+          {
+            "name": "объем типовые",
+            "expression": [
+              "VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth] --выводим для существующего уровня иерархии",
+              "VAR _amt = ",
+              "    CALCULATE (",
+              "        VAR _tipovie_lvl4_Amt = SUM ( 'факт'[объем] ) --для 4 уровня типовых, все позиции ведущие",
+              "        VAR _tipovie_lvl3_Amt = CALCULATE ( SUM ( 'факт'[объем] ), 'типовые'[типовые ур3 вед поз] <>\"\") --для уровней выше согласно ведущим позициям",
+              "        VAR _tipovie_lvl2_Amt = CALCULATE ( SUM ( 'факт'[объем] ), 'типовые'[типовые ур2 вед поз] <>\"\")",
+              "        VAR _tipovie_lvl1_Amt = CALCULATE ( SUM ( 'факт'[объем] ), 'типовые'[типовые ур1 вед поз] <>\"\")",
+              "        VAR _tipovie_lvl0_Amt = CALCULATE ( SUM ( 'факт'[объем] ), 'типовые'[типовые ур0 вед поз] <>\"\")",
+              "        VAR _result =",
+              "            SWITCH (",
+              "                [_tipovie_hierarchy],",
+              "                \"типовые ур4\", _tipovie_lvl4_Amt,",
+              "                \"типовые ур3\", _tipovie_lvl3_Amt,",
+              "                \"типовые ур2\", _tipovie_lvl2_Amt,",
+              "                \"типовые ур1\", _tipovie_lvl1_Amt,",
+              "                \"типовые ур0\", _tipovie_lvl0_Amt",
+              "            )   ",
+              "        RETURN _result,",
+              "        'факт'[типовые вед поз] <> \"\" --фильтруем базу факт по коду с объемом",
+              "    )",
+              "VAR _result = IF(_entity_show_row, _amt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "00b8b0b6-27c9-4c25-ae75-82975b5cf290"
+          },
+          {
+            "name": "ключевые объем типовые",
+            "expression": [
+              "    VAR _entity_show_row = [_tipovie_browse_depth] <= [_tipovie_row_depth]",
+              "    VAR _amt = ",
+              "        CALCULATE (",
+              "            VAR _tipovie_lvl4_Amt = SUM ( 'ключевые объемы'[объем] )",
+              "            VAR _tipovie_lvl3_Amt = CALCULATE ( SUM ( 'ключевые объемы'[объем] ), 'типовые'[типовые ур3 вед поз] <>\"\")",
+              "            VAR _tipovie_lvl2_Amt = CALCULATE ( SUM ( 'ключевые объемы'[объем] ), 'типовые'[типовые ур2 вед поз] <>\"\")",
+              "            VAR _tipovie_lvl1_Amt = CALCULATE ( SUM ( 'ключевые объемы'[объем] ), 'типовые'[типовые ур1 вед поз] <>\"\")",
+              "            VAR _tipovie_lvl0_Amt = CALCULATE ( SUM ( 'ключевые объемы'[объем] ), 'типовые'[типовые ур0 вед поз] <>\"\")",
+              "            VAR _result =",
+              "                SWITCH (",
+              "                    [_tipovie_hierarchy],",
+              "                    \"типовые ур4\", _tipovie_lvl4_Amt,",
+              "                    \"типовые ур3\", _tipovie_lvl3_Amt,",
+              "                    \"типовые ур2\", _tipovie_lvl2_Amt,",
+              "                    \"типовые ур1\", _tipovie_lvl1_Amt,",
+              "                    \"типовые ур0\", _tipovie_lvl0_Amt",
+              "                )   ",
+              "            RETURN _result,",
+              "            'ключевые объемы'[типовые вед поз] <> \"\" --Условие на фильтрацию базы ключевые объемы по кодам с объемом",
+              "        )",
+              "    VAR _result = IF(_entity_show_row, _amt)",
+              "    RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "5413d14d-c023-42d5-a1f8-2a96947a959c"
+          },
+          {
+            "name": "время обновления отчета",
+            "expression": "SELECTEDVALUE('время обновления'[дата время]) --получаем значение времени обновления отчета",
+            "formatString": "dd.mm.yyyy hh:nn:ss",
+            "lineageTag": "4e629c29-5330-4bfc-953c-635bf85f2924",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1049\" Group=\"GeneralDateTimeLong\" FormatString=\"dd.MM.yyyy HH:mm:ss\" /></DateTimes></Format>"
+              }
+            ]
+          },
+          {
+            "name": "метаданные дата модель",
+            "expression": [
+              "IF(",
+              "        HASONEVALUE('проект'[проект краткий]),",
+              "        MAX('факт'[дата модель])",
+              "    )"
+            ],
+            "formatString": "dd.mm.yyyy",
+            "lineageTag": "9faa5866-a830-481a-9e16-b15cc4fc4ebf",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1049\" Group=\"ShortDate\" FormatString=\"dd.MM.yyyy\" /></DateTimes></Format>"
+              }
+            ]
+          },
+          {
+            "name": "имя проекта",
+            "expression": [
+              "SELECTEDVALUE(",
+              "    'проект'[проект краткий], --если выбран один проект, то выводим его имя",
+              "    \"#выбрано несколько проектов\" --если несколько, то сообщение",
+              ")"
+            ],
+            "lineageTag": "7e46f5a2-c3ee-4a9b-a991-ef258620246e"
+          },
+          {
+            "name": "метаданные заголовок показатели проекта",
+            "expression": [
+              "\"Фактические объемы, трудозатраты и нормы по проекту \" & [имя проекта] & \" на \"  & ",
+              "        FORMAT([метаданные дата модель], \"mmmm yyyy\")",
+              ""
+            ],
+            "lineageTag": "e6842b67-2f6e-4877-ab40-06c8a5c03b5e"
+          },
+          {
+            "name": "часы карнет",
+            "expression": "SUM('карнет'[1к.часы]) -- фактические часы по карнету",
+            "formatString": "#,##0",
+            "lineageTag": "ecbf59d2-34c2-46f3-ba93-5e84432ab7e0"
+          },
+          {
+            "name": "нормочасы карнет",
+            "expression": "SUM('карнет'[1н.часы]) -- нормочасы по карнету",
+            "formatString": "#,##0",
+            "lineageTag": "271152f9-7050-48b2-ad08-a39ad944e69c"
+          },
+          {
+            "name": "нормочасы карнет н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [нормочасы карнет],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "1b44753c-a928-4916-acbb-13841284f7c4"
+          },
+          {
+            "name": "часы карнет н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [часы карнет],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "1048e894-cbf0-4b96-b46e-6d76235c12db"
+          },
+          {
+            "name": "cpi карнет",
+            "expression": "DIVIDE([часы карнет], [нормочасы карнет]) --CPI по карнету",
+            "formatString": "#,##0.00",
+            "lineageTag": "b358325b-ad7a-4c09-b038-45048172585f"
+          },
+          {
+            "name": "cpi карнет н.",
+            "expression": "DIVIDE([часы карнет н.], [нормочасы карнет н.]) --CPI по карнету",
+            "formatString": "#,##0.00",
+            "lineageTag": "b4f4d1a7-a8f3-4d84-8aed-0853fc2b42d1"
+          },
+          {
+            "name": "cpi ет1",
+            "expression": "DIVIDE([часы ет1 + доп.], [нормочасы ет1 зим]) --CPI по ет1",
+            "formatString": "#,##0.00",
+            "lineageTag": "510a482d-1df3-4a4e-ae21-1982cfd20083"
+          },
+          {
+            "name": "нормочасы ет1 зим н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [нормочасы ет1 зим],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "27e05ad1-a66c-4d53-9879-3aa2640d1a7c"
+          },
+          {
+            "name": "часы ет1 + доп. н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [часы ет1 + доп.],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "b89cdcf6-5fc0-49d2-8795-2dc2ee8e2d0b"
+          },
+          {
+            "name": "cpi ет1 н.",
+            "expression": "DIVIDE([нормочасы ет1 зим н.], [часы ет1 + доп. н.]) --CPI по ет1",
+            "formatString": "#,##0.00",
+            "lineageTag": "cef62858-b7b5-4abd-b217-e40f39808767"
+          },
+          {
+            "name": "часы доп. н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [часы доп.],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "2c1b6290-d6af-4370-badd-87c4beeb53a4"
+          },
+          {
+            "name": "часы ет1 н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [часы ет1],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "536c3c52-ca34-4591-88db-374c3d8ef363"
+          },
+          {
+            "name": "часы доп. % факт н.",
+            "expression": [
+              "VAR _first_date_in_selection = MIN('календарь'[дата]) --первая видимая дата",
+              "VAR _last_date_in_selection = MAX('календарь'[дата]) --последняя видимая дата",
+              "VAR _last_date_available = CALCULATE(MAX('карнет'[дата]), ALL('календарь')) --последняя дата по карнету",
+              "VAR _show_data = _first_date_in_selection <= _last_date_available --показываем метрику для периода в котором подавался отчет",
+              "VAR _rt = CALCULATE(",
+              "    [часы доп. % факт],",
+              "    'календарь'[дата] <= _last_date_in_selection, --за весь период строительства",
+              "    ALL('календарь')",
+              ")",
+              "VAR _result = if(_show_data, _rt)",
+              "RETURN _result"
+            ],
+            "formatString": "#,##0 %",
+            "lineageTag": "c2f76f95-9d41-422f-9a6c-a9c2ac5d2355"
+          },
+          {
+            "name": "дельта часы карнет - ет1 + доп н.",
+            "expression": [
+              "    VAR _value_to_compare = [часы карнет н.] --накопительные часы по карнету",
+              "    VAR _base_value = [часы ет1 + доп. н.] --накопительные часы ет1 с доп часами",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF( --выводим если обе велечины не null",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta --абсолютная разница ",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "7dc028ec-f13d-42ee-bab5-7e2696e411c4"
+          },
+          {
+            "name": "дельта нормочасы карнет - ет1 зим н.",
+            "expression": [
+              "    VAR _value_to_compare = [нормочасы карнет н.] --накопительные нормочасы по вкс",
+              "    VAR _base_value = [нормочасы ет1 зим н.] --накопительные нормочасы ет1 с учетом зимнего к-та",
+              "    VAR _delta = _value_to_compare - _base_value",
+              "    RETURN",
+              "        IF( --выводим если обе велечины не null",
+              "            NOT(ISBLANK(_value_to_compare))",
+              "                && NOT(ISBLANK(_base_value)),",
+              "                _delta --абсолютная разница ",
+              "            )"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "a109716c-abc4-4bcf-8dde-721179552b75"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "карнет",
+        "lineageTag": "868b206d-a687-478e-b268-85ba78deba78",
+        "columns": [
+          {
+            "name": "дата",
+            "dataType": "dateTime",
+            "sourceColumn": "дата",
+            "formatString": "Long Date",
+            "lineageTag": "2b4a1620-7bd9-48c0-bda5-584fa356346d",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"D\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "дата"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "проект_key",
+            "dataType": "string",
+            "sourceColumn": "проект_key",
+            "lineageTag": "57cd100d-55d6-4d9f-a374-6760d32cf913",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "проект_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "организация_key",
+            "dataType": "string",
+            "sourceColumn": "организация_key",
+            "lineageTag": "542d7978-d123-4a4c-9a5f-e37667c1d093",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "организация_key"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "1н.часы",
+            "dataType": "double",
+            "sourceColumn": "1н.часы",
+            "lineageTag": "3b6fba23-0a1b-4e7d-baee-86cf1833e86e",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "1н.часы"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "1к.часы",
+            "dataType": "double",
+            "sourceColumn": "1к.часы",
+            "lineageTag": "9354d436-fb98-41f4-b45a-75e3f9b26b4c",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "1к.часы"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "карнет-bdb352fe-77b1-4a59-bbc6-5d5277c2fba9",
+            "mode": "import",
+            "queryGroup": "fact",
+            "source": {
+              "type": "m",
+              "expression": [
+                "/* ",
+                "    объединяем таблицы 1к1н (карнет) из баз доп часов",
+                " */",
+                "let",
+                "    source = #\"_содержимое_дополнительные_часы\", //ссылка шаг в котором извлечено содержимое баз дополнительных часов",
+                "    filter_data = Table.SelectRows(source,  each [Item] = \"_1к1н\"), //оставляем таблицы c карнетом",
+                "    combine_tables = Table.Combine(filter_data[Data]), //объединяем таблицы",
+                "    select_columns = Table.SelectColumns( //выбираем требуемые поля",
+                "        combine_tables,",
+                "       {",
+                "            \"дата\",",
+                "            \"проект_key\",",
+                "            \"организация_key\", ",
+                "            \"1н.часы\",",
+                "            \"1к.часы\"",
+                "        }",
+                "    ),",
+                "    change_dtype = Table.TransformColumnTypes( //изменяем тип данных",
+                "        select_columns,",
+                "        {",
+                "            {\"дата\", type date},",
+                "            {\"проект_key\", type text},",
+                "            {\"организация_key\", type text},",
+                "            {\"1н.часы\", type number},",
+                "            {\"1к.часы\", type number}",
+                "        }",
+                "    )",
+                "in",
+                "    change_dtype"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "672ccedd-c163-4f54-bb95-dfc058b40416",
+        "fromTable": "факт",
+        "fromColumn": "проект_key",
+        "toTable": "проект",
+        "toColumn": "проект_key"
+      },
+      {
+        "name": "3c84aebf-bbd6-405a-8623-1b7baa97b7ec",
+        "fromTable": "дополнительные часы",
+        "fromColumn": "проект_key",
+        "toTable": "проект",
+        "toColumn": "проект_key"
+      },
+      {
+        "name": "e9664c75-cb92-4d38-90e0-727fad7066f0",
+        "fromTable": "ключевые часы",
+        "fromColumn": "проект_key",
+        "toTable": "проект",
+        "toColumn": "проект_key"
+      },
+      {
+        "name": "a84ed976-2d01-4808-b48d-b8306d6f609e",
+        "fromTable": "ключевые объемы",
+        "fromColumn": "проект_key",
+        "toTable": "проект",
+        "toColumn": "проект_key"
+      },
+      {
+        "name": "111208f8-0747-4717-a4b6-4019faa2eeeb",
+        "fromTable": "факт",
+        "fromColumn": "дата",
+        "toTable": "календарь",
+        "toColumn": "дата"
+      },
+      {
+        "name": "482099cc-efb1-4437-8109-10d0ba2f5385",
+        "fromTable": "дополнительные часы",
+        "fromColumn": "дата",
+        "toTable": "календарь",
+        "toColumn": "дата"
+      },
+      {
+        "name": "41e92759-3935-4f4e-9582-109f22a35679",
+        "fromTable": "ключевые часы",
+        "fromColumn": "дата",
+        "toTable": "календарь",
+        "toColumn": "дата"
+      },
+      {
+        "name": "a15b1b80-cb17-4eaf-a991-961da85b8ebd",
+        "fromTable": "ключевые объемы",
+        "fromColumn": "дата",
+        "toTable": "календарь",
+        "toColumn": "дата"
+      },
+      {
+        "name": "a58720ad-5091-49bf-a1f7-a742ac5834f2",
+        "fromTable": "карнет",
+        "fromColumn": "проект_key",
+        "toTable": "проект",
+        "toColumn": "проект_key"
+      },
+      {
+        "name": "aca965ff-052e-4a8a-b1f6-3fbb9537d123",
+        "fromTable": "факт",
+        "fromColumn": "организация_key",
+        "toTable": "организация",
+        "toColumn": "организация_key"
+      },
+      {
+        "name": "d9a22344-a222-4b52-be04-a3eceff2f57f",
+        "fromTable": "дополнительные часы",
+        "fromColumn": "организация_key",
+        "toTable": "организация",
+        "toColumn": "организация_key"
+      },
+      {
+        "name": "2d2fab12-663b-48fb-ae42-6ad931d6240d",
+        "fromTable": "ключевые часы",
+        "fromColumn": "организация_key",
+        "toTable": "организация",
+        "toColumn": "организация_key"
+      },
+      {
+        "name": "edb6641d-69c1-40b1-b954-e3a6df20468d",
+        "fromTable": "ключевые объемы",
+        "fromColumn": "организация_key",
+        "toTable": "организация",
+        "toColumn": "организация_key"
+      },
+      {
+        "name": "320c008b-3b39-43ae-93f7-c0dd414a6d0b",
+        "fromTable": "карнет",
+        "fromColumn": "организация_key",
+        "toTable": "организация",
+        "toColumn": "организация_key"
+      },
+      {
+        "name": "f6d2359c-00b4-4132-9666-f7183646aba8",
+        "fromTable": "факт",
+        "fromColumn": "типовые_key",
+        "toTable": "типовые",
+        "toColumn": "типовые_key"
+      },
+      {
+        "name": "d423cefb-fbad-429e-b395-8128c3e23264",
+        "fromTable": "дополнительные часы",
+        "fromColumn": "типовые_key",
+        "toTable": "типовые",
+        "toColumn": "типовые_key"
+      },
+      {
+        "name": "bdf7e600-1a12-49f1-ab71-aba06621a9e5",
+        "fromTable": "ключевые часы",
+        "fromColumn": "типовые_key",
+        "toTable": "типовые",
+        "toColumn": "типовые_key"
+      },
+      {
+        "name": "36f1c386-5a54-424a-826a-3d1223dbb9e8",
+        "fromTable": "ключевые объемы",
+        "fromColumn": "типовые_key",
+        "toTable": "типовые",
+        "toColumn": "типовые_key"
+      },
+      {
+        "name": "0c0ca3bc-c58b-439f-b112-8a80f7133a57",
+        "fromTable": "карнет",
+        "fromColumn": "дата",
+        "toTable": "календарь",
+        "toColumn": "дата"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "ru-RU",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "2.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "статус_влр.влр_дата_актуализации": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "влр дата актуализации"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.колво_влр": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "кол-во влр"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.колво_влр_передано_на_проверку": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "кол-во влр передано на проверку"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.колво_влр_выдано_замечаний": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "кол-во влр выдано замечаний"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.колво_влр_согласовано_оп": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "кол-во влр согласовано оп"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.колво_влр_подписано_оп": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "кол-во влр подписано оп"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.колво_влр_согласовано_цок": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "кол-во влр согласовано цок"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.влр_передано_на_проверку": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "% влр передано на проверку"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.влр_выдано_замечаний": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "% влр выдано замечаний"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.влр_согласовано_оп": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "% влр согласовано оп"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.влр_подписано_оп": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "% влр подписано оп"
+                  }
+                },
+                "State": "Generated"
+              },
+              "статус_влр.влр_согласовано_цок": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "статус влр",
+                    "ConceptualProperty": "% влр согласовано цок"
+                  }
+                },
+                "State": "Generated"
+              },
+              "table_measures.факт_нормочасы": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_measures",
+                    "ConceptualProperty": "факт нормочасы"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "контракт часы": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table_measures.нормочасы_накопительно": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_measures",
+                    "ConceptualProperty": "нормочасы накопительно"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "контракт накопительно": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table_measures.факт_часы_накопительно": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "_measures",
+                    "ConceptualProperty": "факт часы накопительно"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "факт накопительно": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "expressions": [
+      {
+        "name": "_содержимое_факт",
+        "kind": "m",
+        "expression": [
+          "/* ",
+          "    содержимое файлов с фактом",
+          " */",
+          "let",
+          "    source = Folder.Files(\"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\факт\"), //содержимое папки",
+          "    filter_subfolder = Table.SelectRows( //исключаем подпапки",
+          "        source, ",
+          "        each [Folder Path] = \"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\факт\" & \"\\\"",
+          "    ), ",
+          "    filter_temp_files = Table.SelectRows(filter_subfolder, each not Text.StartsWith([Name], \"~\")), //исключаем временные файлы",
+          "    extract_content = Table.AddColumn(filter_temp_files, \"Data\", each Excel.Workbook([Content])), //извлекаем содержимое файлов",
+          "    expand_content = //раскрываем содержимое файлов",
+          "        Table.ExpandTableColumn(",
+          "            extract_content, ",
+          "            \"Data\", ",
+          "            {\"Name\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}, ",
+          "            {\"Name.1\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}",
+          "        ),",
+          "    select_attribute_columns = //оставляем нужные аттрибуты",
+          "        Table.SelectColumns(",
+          "            expand_content,",
+          "            {",
+          "                \"Name\",",
+          "                \"Kind\", ",
+          "                \"Item\", ",
+          "                \"Data\" ",
+          "            }",
+          "        ),",
+          "    filter_tables = Table.SelectRows(select_attribute_columns, each [Kind] = \"Table\") //оставляем таблицы",
+          "in",
+          "    filter_tables"
+        ],
+        "queryGroup": "данные",
+        "lineageTag": "eaf1450c-ba0b-4716-8410-ca3a5e24e3f5",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "_содержимое_дополнительные_часы",
+        "kind": "m",
+        "expression": [
+          "/* ",
+          "    содержимое файлов дополнительных часов",
+          " */",
+          "let",
+          "    source = Folder.Files(\"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\дополнительные часы\"), //содержимое папки",
+          "    filter_subfolder = Table.SelectRows( //исключаем подпапки",
+          "        source, ",
+          "        each [Folder Path] = \"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\дополнительные часы\" & \"\\\"",
+          "    ), ",
+          "    filter_temp_files = Table.SelectRows(filter_subfolder, each not Text.StartsWith([Name], \"~\")), //исключаем временные файлы",
+          "    extract_content = Table.AddColumn(filter_temp_files, \"Data\", each Excel.Workbook([Content])), //извлекаем содержимое файлов",
+          "    expand_content = //раскрываем содержимое файлов",
+          "        Table.ExpandTableColumn(",
+          "            extract_content, ",
+          "            \"Data\", ",
+          "            {\"Name\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}, ",
+          "            {\"Name.1\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}",
+          "        ),",
+          "    select_attribute_columns = //оставляем нужные аттрибуты",
+          "        Table.SelectColumns(",
+          "            expand_content,",
+          "            {",
+          "                \"Name\",",
+          "                \"Kind\", ",
+          "                \"Item\", ",
+          "                \"Data\" ",
+          "            }",
+          "        ),",
+          "    filter_tables = Table.SelectRows(select_attribute_columns, each [Kind] = \"Table\") //оставляем таблицы",
+          "in",
+          "    filter_tables"
+        ],
+        "queryGroup": "данные",
+        "lineageTag": "72c63f8a-2bdb-4447-8825-a6112d3abeef",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "_содержимое_ключевые",
+        "kind": "m",
+        "expression": [
+          "/* ",
+          "    содержимое файлов ключевых",
+          " */",
+          "let",
+          "    source = Folder.Files(\"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\ключевые\"), //содержимое папки",
+          "    filter_subfolder = Table.SelectRows( //исключаем подпапки",
+          "        source, ",
+          "        each [Folder Path] = \"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\ключевые\" & \"\\\"",
+          "    ), ",
+          "    filter_temp_files = Table.SelectRows(filter_subfolder, each not Text.StartsWith([Name], \"~\")), //исключаем временные файлы",
+          "    extract_content = Table.AddColumn(filter_temp_files, \"Data\", each Excel.Workbook([Content])), //извлекаем содержимое файлов",
+          "    expand_content = //раскрываем содержимое файлов",
+          "        Table.ExpandTableColumn(",
+          "            extract_content, ",
+          "            \"Data\", ",
+          "            {\"Name\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}, ",
+          "            {\"Name.1\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}",
+          "        ),",
+          "    select_attribute_columns = //оставляем нужные аттрибуты",
+          "        Table.SelectColumns(",
+          "            expand_content,",
+          "            {",
+          "                \"Name\",",
+          "                \"Kind\", ",
+          "                \"Item\", ",
+          "                \"Data\" ",
+          "            }",
+          "        ),",
+          "    filter_tables = Table.SelectRows(select_attribute_columns, each [Kind] = \"Table\") //оставляем таблицы",
+          "in",
+          "    filter_tables"
+        ],
+        "queryGroup": "данные",
+        "lineageTag": "6d9dc671-e3c1-4df5-b000-09a6e62a39ec",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "_содержимое_схемы",
+        "kind": "m",
+        "expression": [
+          "/* ",
+          "    содержимое файла схема",
+          " */",
+          "let",
+          "    source = Excel.Workbook(File.Contents(\"C:\\Users\\FeyginAS\\Desktop\\veles-power-quey\\модель\\тест\\схема.xlsx\"), null, true), //содержимое файла",
+          "    select_attribute_columns = //оставляем нужные аттрибуты",
+          "        Table.SelectColumns(",
+          "            source,",
+          "            {",
+          "                \"Name\",",
+          "                \"Kind\", ",
+          "                \"Item\", ",
+          "                \"Data\" ",
+          "            }",
+          "        ),",
+          "    filter_tables = Table.SelectRows(select_attribute_columns, each [Kind] = \"Table\")",
+          "in",
+          "    filter_tables"
+        ],
+        "queryGroup": "данные",
+        "lineageTag": "7e350ed8-9695-4ff7-9890-debc7011fff4",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      }
+    ],
+    "queryGroups": [
+      {
+        "folder": "данные",
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "folder": "dim",
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "folder": "fact",
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "8"
+          }
+        ]
+      },
+      {
+        "folder": "метаданные",
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "9"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.97.2222.0 (21.09)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"факт\",\"дополнительные часы\",\"ключевые часы\",\"ключевые объемы\",\"_measures\",\"время обновления\",\"_содержимое_схемы\",\"проект\",\"организация\",\"типовые\",\"календарь\",\"карнет\",\"_содержимое_дополнительные_часы\",\"_содержимое_ключевые\",\"_содержимое_факт\"]"
+      },
+      {
+        "name": "TabularEditor_SerializeOptions",
+        "value": "{\"IgnoreInferredObjects\":true,\"IgnoreInferredProperties\":true,\"IgnoreTimestamps\":true,\"SplitMultilineStrings\":true,\"PrefixFilenames\":false,\"LocalTranslations\":false,\"LocalPerspectives\":false,\"LocalRelationships\":false,\"Levels\":[\"Data Sources\",\"Shared Expressions\",\"Perspectives\",\"Relationships\",\"Roles\",\"Tables\",\"Tables/Columns\",\"Tables/Hierarchies\",\"Tables/Measures\",\"Tables/Partitions\",\"Tables/Calculation Items\",\"Translations\"]}"
+      }
+    ]
+  }
+}
