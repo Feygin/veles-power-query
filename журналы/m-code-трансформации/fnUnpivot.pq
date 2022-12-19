@@ -14,8 +14,15 @@ let
         filter_nulls = Table.SelectRows(unpivot, each ([значение] <> 0) and ([значение] <> null) and ([значение] <> "")), //исключаем строки без значений
         //разделяем многострочную шапку по столбцам
         split_multiheader = Table.SplitColumn(filter_nulls, "аттрибут", Splitter.SplitTextByDelimiter("^", QuoteStyle.Csv), MULTIHEADER_ROWS), 
+        fnPivotFunction = //функция для агррегации значений при pivot
+            (pivot_result)=>
+                if List.Count(pivot_result) = 1 then //если дубликатов строк нет, выводим результирующее значение
+                    List.First(pivot_result)
+                else //в противном случае выводим ошибку
+                    "Ошибка: не допускается наличие двух одинаковых строк.#(cr)"
+                    & "Добавте уникальный идентификатор, например, индекс.",
         //трансформируем аттрибуты периода в столбцы
-        pivot = Table.Pivot(split_multiheader, List.Distinct(split_multiheader[показатель]), "показатель", "значение", List.Sum),
+        pivot = Table.Pivot(split_multiheader, List.Distinct(split_multiheader[показатель]), "показатель", "значение", fnPivotFunction),
         //если в шапке в блоке с датами были столбцы с одинаковыми названиями, например, два столбца факт^часы факт^01.06.2018^
         //тогда для того, чтобы различать столбцы между собой power query добавляет идентификатор _n:
         //факт^часы факт^01.06.2018^, факт^часы факт^01.06.2018^_1

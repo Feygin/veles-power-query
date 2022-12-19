@@ -62,7 +62,10 @@ let
             in
                 rename_cols,
     apply_column_slection = fnSelectContractColumns(combine), //применяем функцию 
+
+    add_refresh_date = fnAddRefreshDateTime(apply_column_slection, [column = "время обновления база"]), //добавлем время обновления
+
     //задаем порядок столбцов согласно пользовательскому списку
-    reorder_cols = Table.ReorderColumns(apply_column_slection, #"столбцы_контракт", MissingField.Ignore) 
+    reorder_cols = Table.ReorderColumns(add_refresh_date, #"столбцы_контракт", MissingField.Ignore) 
 in
     reorder_cols
