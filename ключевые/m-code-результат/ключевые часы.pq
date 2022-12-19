@@ -56,7 +56,7 @@ let
     join_project = Table.NestedJoin(expand_calendar, {"проект_key"}, проект, {"проект_key"}, "проект_joined", JoinKind.LeftOuter), //присоединяем проект
     expand_project = Table.ExpandTableColumn(join_project, "проект_joined", {"проект", "подпроект"}, {"схема.проект", "схема.подпроект"}),
     join_subcontractor = Table.NestedJoin(expand_project, {"организация_key"}, организация, {"организация_key"}, "организация_joined", JoinKind.LeftOuter), //присоединяем организацию
-    expand_subconractor = Table.ExpandTableColumn(join_subcontractor, "организация_joined", {"организация"}, {"схема.организация"}),
+    expand_subconractor = Table.ExpandTableColumn(join_subcontractor, "организация_joined", {"организация", "организация с суб вм"}, {"схема.организация", "схема.организация с суб вм"}),
     join_kluchevie = Table.NestedJoin(expand_subconractor, {"ключевые_key"}, ключевые, {"ключевые_key"}, "ключевые_joined", JoinKind.LeftOuter),//присоединяем ключевые
     expand_kluchevie = Table.ExpandTableColumn(
         join_kluchevie, 
@@ -104,6 +104,7 @@ let
             "организация",
             "организация_key",
             "схема.организация",
+            "схема.организация с суб вм",
             "ключевые",
             "ед изм",
             "ключевые_key",
