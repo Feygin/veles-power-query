@@ -52,10 +52,7 @@ let
     check_errors = Table.AddColumn( //проверяем наличие ошибок при трансформации файлов
         filter_index, 
         "статус извлечения", 
-        each if (try [ExtractHeader])[HasError] then "Ошибка при извлечении заголовка: "  & fnExtractErrDescription((try [ExtractHeader])[Error])
-             else if (try [UnfoldHierarchy])[HasError] then "Ошибка при извлечении уровней иерархии: "  & fnExtractErrDescription((try [UnfoldHierarchy])[Error])
-             else if (try [FilterIndex])[HasError] then "Ошибка при определении индексов: "  & fnExtractErrDescription((try [FilterIndex])[Error])
-             else "Извлечено"
+        each if (try [ExtractHeader])[HasError] then "Ошибка при извлечении заголовка: "  & fnExtractErrDescription((try [ExtractHeader])[Error]) else "Извлечено"
     )
 
 in

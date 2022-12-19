@@ -17,6 +17,6 @@ let
     source_extracted = Table.SelectColumns(#"_трансформируем_данные", {"имя файла", "лист", "статус извлечения"}), //из шага с трансформацией таблиц оставляем аттрибуты и статус извлечения
     join = Table.NestedJoin(add_result_sheet, {"имя файла", "лист"}, source_extracted, {"имя файла", "лист"}, "_joined", JoinKind.LeftOuter), //объединяем ожидаемый результат и фактический
     expand_status = Table.ExpandTableColumn(join, "_joined", {"статус извлечения"}), //раскрываем статус извлечения
-    add_status_not_found = Table.ReplaceValue(expand_status,null,"Ошибка лист не найден",Replacer.ReplaceValue,{"статус извлечения"}) //если статус отсутвует, значит файл не был извлечен
+    add_status_not_found = Table.ReplaceValue(expand_status,null,"Ошибка: недопустимое имя файла или листа",Replacer.ReplaceValue,{"статус извлечения"}) //если статус отсутвует, значит файл не был извлечен
 in
     add_status_not_found

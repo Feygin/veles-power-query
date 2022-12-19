@@ -70,6 +70,8 @@ let
 
     unpivot = fnUnpivot(apply_column_slection), //unpivot месячной части
 
-    reorder_cols = Table.ReorderColumns(unpivot, #"столбцы_факт", MissingField.Ignore) //меням расположение столбцов согласно пользовательскому списку
+    add_refresh_date = fnAddRefreshDateTime(unpivot, [column = "время обновления база"]), //добавлем время обновления
+
+    reorder_cols = Table.ReorderColumns(add_refresh_date, #"столбцы_факт", MissingField.Ignore) //меням расположение столбцов согласно пользовательскому списку
 in
     reorder_cols
