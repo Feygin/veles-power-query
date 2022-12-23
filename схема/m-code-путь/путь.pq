@@ -1,5 +1,8 @@
+/* 
+    загружаем таблицу с путем к справочнику в google sheets
+ */
 let
-    Source = Excel.CurrentWorkbook(){[Name="путь"]}[Content],
-    #"Changed Type" = Table.TransformColumnTypes(Source,{{"файл", type text}, {"путь", type text}})
+    source = Excel.CurrentWorkbook(){[Name="путь"]}[Content],
+    change_dtype = Table.TransformColumnTypes(source,{{"файл", type text}, {"путь", type text}})
 in
-    #"Changed Type"
+    change_dtype
