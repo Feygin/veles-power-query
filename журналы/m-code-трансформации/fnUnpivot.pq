@@ -16,8 +16,8 @@ let
         split_multiheader = Table.SplitColumn(filter_nulls, "аттрибут", Splitter.SplitTextByDelimiter("^", QuoteStyle.Csv), MULTIHEADER_ROWS), 
         fnPivotFunction = //функция для агррегации значений при pivot
             (pivot_result)=>
-                if List.Count(pivot_result) = 1 then //если дубликатов строк нет, выводим результирующее значение
-                    List.First(pivot_result)
+                if List.Count(pivot_result) <= 1 then //если дубликатов строк нет, выводим результирующее значение
+                    List.First(pivot_result) //List.Count = 0 если результирующие значения отсутствуют, при этом List.First выдаст null
                 else //в противном случае выводим ошибку
                     "Ошибка: не допускается наличие двух одинаковых строк.#(cr)"
                     & "Добавте уникальный идентификатор, например, индекс.",
