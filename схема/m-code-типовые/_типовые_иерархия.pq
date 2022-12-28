@@ -1,7 +1,10 @@
+/* 
+    раскрываем иерархию для типовых
+ */
 let
-    source = #"_типовые_иcточник", 
+    source = #"_типовые_иcточник", //ссылка на предыдущий шаг
 
-    //добавляем столбцы для формирования иерархии типовых позиций по уровням
+    //отбираем столбцы для формирования иерархии типовых позиций по уровням
     select_initial_columns = Table.SelectColumns(
         source,
         {
@@ -17,6 +20,7 @@ let
     ),
     trim_description = Table.TransformColumns(select_initial_columns,{{"типовые наименование", Text.Trim, type text}}),
 
+    //раскрываем иерархию
     //функция для объединения значений в столбцах через "-" 
     fnCombineCols = 
         (first_col, second_col)=>

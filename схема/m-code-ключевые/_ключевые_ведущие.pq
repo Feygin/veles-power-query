@@ -1,5 +1,8 @@
+/* 
+    создаем ведущие позиции для подсчета объемов для таблицы ключевых
+ */
 let
-    source = #"_ключевые_иерархия",
+    source = #"_ключевые_иерархия", //ссылка на предыдущий шаг
     select_needed_cols = 
         Table.SelectColumns(
             source,
@@ -11,15 +14,15 @@ let
         ), //оставляем столбцы относящиеся к задаче
     
     //раскрываем путь ключевые позиций
-    select_cols = Table.SelectColumns(select_needed_cols, {"ключевые путь", "ключевые наименование с ед изм", "ключевые уровень"}),
-    parse_hierarchy_path = Table.AddColumn(select_cols, "ключевые путь splitted", each Text.Split([ключевые путь], "|"), type list),
-    expand_hierarchy_path = Table.ExpandListColumn(parse_hierarchy_path, "ключевые путь splitted"),
-    join_leading = Table.NestedJoin(expand_hierarchy_path, {"ключевые путь splitted"}, select_needed_cols, {"ключевые наименование с ед изм"}, "ключевые_joined"),
-    get_leading = Table.ExpandTableColumn(join_leading, "ключевые_joined", {"ключевые вед поз"}),
-    group_by_tipovie = Table.Group(get_leading, {"ключевые наименование с ед изм"}, {"group", each _}),
+    select_cols = Table.SelectColumns(select_needed_cols, {"ключевые путь", "ключевые наименование с ед изм", "ключевые уровень"}), //оставляем столбцы с путем, ключом и номером иерархии
+    parse_hierarchy_path = Table.AddColumn(select_cols, "ключевые путь splitted", each Text.Split([ключевые путь], "|"), type list), //трансформируем путь в список ключей
+    expand_hierarchy_path = Table.ExpandListColumn(parse_hierarchy_path, "ключевые путь splitted"), //раскрываем список ключей в строки
+    join_leading = Table.NestedJoin(expand_hierarchy_path, {"ключевые путь splitted"}, select_needed_cols, {"ключевые наименование с ед изм"}, "ключевые_joined"), //self join с получением ведущей позиции
+    get_leading = Table.ExpandTableColumn(join_leading, "ключевые_joined", {"ключевые вед поз"}), //получаем ведущую позицию
+    group_by_key = Table.Group(get_leading, {"ключевые наименование с ед изм"}, {"group", each _}), //группируем 
 
     //определяем ведущую позицию для текущего уровня
-    cur_lvl = Table.AddColumn(group_by_tipovie, "текущий уровень", each List.First([group][ключевые уровень])), //текущий уровень
+    cur_lvl = Table.AddColumn(group_by_key, "текущий уровень", each List.First([group][ключевые уровень])), //текущий уровень
     cur_lvl_leading = Table.AddColumn(cur_lvl, "текущий уровень вед поз", each Record.FromList({"v"}, {"ключевые ур" & Text.From([текущий уровень]) & " вед поз"}) ), //текущий уровень всегда является ведущим
 
     //определяем ведущие позиции для остальных уровней

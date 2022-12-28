@@ -1,13 +1,13 @@
 /* 
-    загружаем справочник "классификатор"
+    загружаем справочник классификатор
  */
 let
     data = fnGetTableFromFile(#"схема_путь", [kind = "Sheet", name = "классификатор"]), //извлекаем данные из листа классификатор 
-    promote_header = Table.PromoteHeaders(data, [PromoteAllScalars = true]), //поднимаем первую строку в заголовок
-    filter_nulls = Table.SelectRows(promote_header, each ([классификатор] <> null)), //исключаем пустые строки по аттрибуту ключа
-    select_cols = Table.SelectColumns(filter_nulls, {"классификатор", "классификатор описание"}), //выбираем аттрибуты согласно спецификации
+    promote_header = Table.PromoteHeaders(data, [PromoteAllScalars = true]), //используем первую строку листа в качестве заголовка
+    select_cols = Table.SelectColumns(promote_header, {"классификатор", "классификатор описание"}), //выбираем аттрибуты согласно спецификации
     change_dtype = Table.TransformColumnTypes(select_cols,{{"классификатор", type text}, {"классификатор описание", type text}}), //изменяем тип данных
-    duplicate_classificator_key = Table.DuplicateColumn(change_dtype, "классификатор", "классификатор_key"), //дублируем поле с ключом
+    filter_nulls = Table.SelectRows(change_dtype, each ([классификатор] <> null)), //удаляем пустые строки
+    duplicate_classificator_key = Table.DuplicateColumn(filter_nulls, "классификатор", "классификатор_key"), //дублируем поле с ключом
     clean_keys = fnCleanData(duplicate_classificator_key, [columns =  {"классификатор_key"}]), //нормализуем ключ
     check_pk = fnCheckPrimaryKey(clean_keys, [column = "классификатор_key", file_name = "справочник google", table_name = "классификатор_2_0"]), //проверяем уникальность ключа
     add_classificator_with_escr = Table.AddColumn(check_pk, "классификатор с описанием", each [классификатор] & " - " & [классификатор описание], type text), //добавляем пттрибут с наименованием классификатора 
